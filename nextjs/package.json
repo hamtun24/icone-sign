@@ -4,9 +4,9 @@
   "private": true,
   "description": "Modern Next.js frontend for Unified Invoice Processing Workflow",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 5000 --hostname 0.0.0.0",
     "build": "next build",
-    "start": "next start",
+    "start": "next start --port 5000 --hostname 0.0.0.0",
     "lint": "next lint",
     "type-check": "tsc --noEmit"
   },

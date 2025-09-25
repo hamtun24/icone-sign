@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nextjs-app
+  namespace: xmlsign
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nextjs-app
+  template:
+    metadata:
+      labels:
+        app: nextjs-app
+    spec:
+      containers:
+      - name: nextjs-app
+        image: iconesigndocker-nextjs-app
+        env:
+        - name: NEXT_PUBLIC_API_URL
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: NEXT_PUBLIC_API_URL
+        ports:
+        - containerPort: 3000
+      initContainers:
+      - name: wait-for-springboot
+        image: busybox:1.28
+        command: ['sh', '-c', 'until nslookup springboot-service; do echo waiting for springboot; sleep 2; done;']

@@ -1,0 +1,56 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres-db
+    environment:
+      POSTGRES_DB: xmlsign_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./docker/init:/docker-entrypoint-initdb.d
+
+  springboot-app:
+    image: iconesigndocker-springboot-app:v1.2.5
+    container_name: springboot-api
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/xmlsign_db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./temp/download:/app/temp/download
+      - ./src/main/resources/certificates:/app/resources/certificates
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+  nextjs-app:
+    image: iconesigndocker-nextjs-app:v1.0
+    container_name: nextjs-front
+    environment:
+      - NEXT_PUBLIC_API_URL=http://springboot-app:8080
+    ports:
+      - "3000:3000"
+    depends_on:
+      - springboot-app
+    restart: unless-stopped
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cf-tunnel
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+    command: tunnel --no-autoupdate --url http://nextjs-app:3000
+    ports:
+      - "8081:8081"
+    depends_on:
+      - nextjs-app
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+

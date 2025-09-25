@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: xmlsign
+---
+# configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: xmlsign
+data:
+  SPRING_DATASOURCE_URL: "jdbc:postgresql://postgres-service:5432/xmlsign_db"
+  SPRING_DATASOURCE_USERNAME: "postgres"
+  NEXT_PUBLIC_API_URL: "http://springboot-service:8080"

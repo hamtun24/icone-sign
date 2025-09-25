@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-shield-alt me-2"></i>
+                IconeSign Admin Dashboard
+            </a>
+            <div class="navbar-nav ms-auto align-items-center" style="gap: 0.5rem;">
+                <button class="btn btn-outline-light btn-sm ms-2" onclick="logout()" id="logoutNavbarBtn">
+                    <i class="fas fa-sign-out-alt me-1"></i> Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+</div>
+</body>
+</html>
+

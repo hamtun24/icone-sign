@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="sidebar">
+    <div class="sidebar">
+        <nav class="nav flex-column pt-3">
+            <a class="nav-link active" href="#" onclick="showSection('overview')">
+                <i class="fas fa-tachometer-alt me-2"></i>Vue d'ensemble
+            </a>
+            <a class="nav-link" href="#" onclick="showSection('users')">
+                <i class="fas fa-users me-2"></i>Gestion des utilisateurs
+            </a>
+            <a class="nav-link" href="#" onclick="showSection('sessions')">
+                <i class="fas fa-history me-2"></i>Sessions de travail
+            </a>
+            <a class="nav-link" href="#" onclick="showSection('activity')">
+                <i class="fas fa-chart-line me-2"></i>Activité système
+            </a>
+            <a class="nav-link" href="#" onclick="showSection('statistics')">
+                <i class="fas fa-chart-bar me-2"></i>Statistiques
+            </a>
+            <a class="nav-link" href="#" onclick="showSection('settings')">
+                <i class="fas fa-cog me-2"></i>Paramètres
+            </a>
+        </nav>
+    </div>
+</div>
+</body>
+</html>
+

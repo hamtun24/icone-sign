@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudflared
+  namespace: xmlsign
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudflared
+  template:
+    metadata:
+      labels:
+        app: cloudflared
+    spec:
+      containers:
+      - name: cloudflared
+        image: cloudflare/cloudflared:latest
+        env:
+        - name: TUNNEL_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: TUNNEL_TOKEN
+        command:
+        - "cloudflared"
+        - "tunnel"
+        - "--no-autoupdate"
+        - "--url"
+        - "http://nextjs-service:3000"
+        ports:
+        - containerPort: 8081
+      initContainers:
+      - name: wait-for-nextjs
+        image: busybox:1.28
+        command: ['sh', '-c', 'until nslookup nextjs-service; do echo waiting for nextjs; sleep 2; done;']

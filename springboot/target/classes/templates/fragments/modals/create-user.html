@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="createUserModal">
+    <div class="modal fade modal-custom" id="createUserModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-user-plus me-2"></i>Créer un nouvel utilisateur
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="createUserForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="createUsername" class="form-label">Nom d'utilisateur *</label>
+                                    <input type="text" class="form-control form-control-custom" id="createUsername" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="createEmail" class="form-label">Email *</label>
+                                    <input type="email" class="form-control form-control-custom" id="createEmail" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="createFirstName" class="form-label">Prénom *</label>
+                                    <input type="text" class="form-control form-control-custom" id="createFirstName" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="createLastName" class="form-label">Nom *</label>
+                                    <input type="text" class="form-control form-control-custom" id="createLastName" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="createCompany" class="form-label">Entreprise</label>
+                                    <input type="text" class="form-control form-control-custom" id="createCompany">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="createRole" class="form-label">Rôle</label>
+                                    <select class="form-select form-control-custom" id="createRole">
+                                        <option value="USER">Utilisateur</option>
+                                        <option value="ADMIN">Administrateur</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="createPassword" class="form-label">Mot de passe *</label>
+                                    <input type="password" class="form-control form-control-custom" id="createPassword" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="form-check mt-4">
+                                        <input class="form-check-input" type="checkbox" id="createIsActive" checked>
+                                        <label class="form-check-label" for="createIsActive">
+                                            Utilisateur actif
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="createIsVerified" checked>
+                                        <label class="form-check-label" for="createIsVerified">
+                                            Utilisateur vérifié
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <h6><i class="fas fa-key me-2"></i>Identifiants (Optionnel)</h6>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="createTtnUsername" class="form-label">TTN Username</label>
+                                    <input type="text" class="form-control form-control-custom" id="createTtnUsername">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="createTtnPassword" class="form-label">TTN Password</label>
+                                    <input type="password" class="form-control form-control-custom" id="createTtnPassword">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="createTtnMatricule" class="form-label">Matricule Fiscal</label>
+                                    <input type="text" class="form-control form-control-custom" id="createTtnMatricule">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="createAncePin" class="form-label">ANCE SEAL PIN</label>
+                                    <input type="password" class="form-control form-control-custom" id="createAncePin">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="createAnceAlias" class="form-label">ANCE SEAL Alias</label>
+                                    <input type="text" class="form-control form-control-custom" id="createAnceAlias">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="createCertPath" class="form-label">Chemin du certificat</label>
+                                    <input type="text" class="form-control form-control-custom" id="createCertPath" placeholder="resources/certificates/cert.p12">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-primary btn-custom" onclick="submitCreateUser()">
+                        <i class="fas fa-save me-2"></i>Créer l'utilisateur
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

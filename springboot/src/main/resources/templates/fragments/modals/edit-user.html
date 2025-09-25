@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="editUserModal">
+    <div class="modal fade modal-custom" id="editUserModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-user-edit me-2"></i>Modifier l'utilisateur
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editUserForm">
+                        <input type="hidden" id="editUserId">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="editEmail" class="form-label">Email *</label>
+                                    <input type="email" class="form-control form-control-custom" id="editEmail" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="editRole" class="form-label">Rôle</label>
+                                    <select class="form-select form-control-custom" id="editRole">
+                                        <option value="USER">Utilisateur</option>
+                                        <option value="ADMIN">Administrateur</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="editFirstName" class="form-label">Prénom *</label>
+                                    <input type="text" class="form-control form-control-custom" id="editFirstName" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="editLastName" class="form-label">Nom *</label>
+                                    <input type="text" class="form-control form-control-custom" id="editLastName" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="editCompany" class="form-label">Entreprise</label>
+                                    <input type="text" class="form-control form-control-custom" id="editCompany">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="form-check mt-4">
+                                        <input class="form-check-input" type="checkbox" id="editIsActive">
+                                        <label class="form-check-label" for="editIsActive">
+                                            Utilisateur actif
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="editIsVerified">
+                                        <label class="form-check-label" for="editIsVerified">
+                                            Utilisateur vérifié
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-primary btn-custom" onclick="submitEditUser()">
+                        <i class="fas fa-save me-2"></i>Sauvegarder
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

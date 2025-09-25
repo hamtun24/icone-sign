@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-app
+  namespace: xmlsign
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springboot-app
+  template:
+    metadata:
+      labels:
+        app: springboot-app
+    spec:
+      containers:
+      - name: springboot-app
+        image: iconesigndocker-springboot-app:v1.0.1
+        env:
+        - name: SPRING_DATASOURCE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: SPRING_DATASOURCE_URL
+        - name: SPRING_DATASOURCE_USERNAME
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: SPRING_DATASOURCE_USERNAME
+        - name: SPRING_DATASOURCE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: POSTGRES_PASSWORD
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - name: temp-download
+          mountPath: /app/temp/download
+        - name: certificates
+          mountPath: /app/src/main/resources/certificates
+      volumes:
+      - name: temp-download
+        hostPath:
+          path: /tmp/temp/download
+          type: DirectoryOrCreate
+      - name: certificates
+        hostPath:
+          path: /tmp/certificates
+          type: DirectoryOrCreate
+      initContainers:
+      - name: wait-for-postgres
+        image: busybox:1.28
+        command: ['sh', '-c', 'until nslookup postgres-service; do echo waiting for postgres; sleep 2; done;']

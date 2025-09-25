@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div th:fragment="overviewCards">
+        <div class="row mb-4" id="statsCards">
+            <div class="col-md-3 mb-3">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #3498db, #5dade2);">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="stat-number" id="totalUsers">-</h3>
+                    <p class="stat-label">Utilisateurs totaux</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #27ae60, #58d68d);">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3 class="stat-number" id="activeUsers">-</h3>
+                    <p class="stat-label">Utilisateurs actifs</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #f39c12, #f7dc6f);">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="stat-number" id="totalSessions">-</h3>
+                    <p class="stat-label">Sessions totales</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #e74c3c, #ec7063);">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="stat-number" id="successRate">-</h3>
+                    <p class="stat-label">Taux de succès</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,2569 @@
+{
+  "diagnosticData" : {
+    "documentName" : "signed.xml",
+    "validationDate" : 1756554691069,
+    "containerInfo" : null,
+    "signatures" : [ {
+      "signatureFilename" : "signed.xml",
+      "parentId" : null,
+      "errorMessage" : null,
+      "dateTime" : 1600256236000,
+      "signatureFormat" : "XAdES-BASELINE-B",
+      "structuralValidation" : {
+        "valid" : true,
+        "message" : null
+      },
+      "digestMatchers" : [ {
+        "digestMethod" : "SHA256",
+        "digestValue" : "bCtqJZah+oGHv2z1bsUbJk2Q4/P+v0gFEvhr5I/is1E=",
+        "dataFound" : true,
+        "dataIntact" : false,
+        "type" : "REFERENCE",
+        "name" : "r-id-frs"
+      }, {
+        "digestMethod" : "SHA256",
+        "digestValue" : "mInZko4fu4O3cpG9+sOaJOWWEvZghTEFwqEZsU+mVSk=",
+        "dataFound" : false,
+        "dataIntact" : false,
+        "type" : "SIGNED_PROPERTIES",
+        "name" : "#xades-SigFrs"
+      }, {
+        "digestMethod" : null,
+        "digestValue" : null,
+        "dataFound" : false,
+        "dataIntact" : false,
+        "type" : "SIGNED_PROPERTIES",
+        "name" : null
+      } ],
+      "basicSignature" : {
+        "encryptionAlgoUsedToSignThisToken" : "RSA",
+        "keyLengthUsedToSignThisToken" : "2048",
+        "digestAlgoUsedToSignThisToken" : "SHA256",
+        "maskGenerationFunctionUsedToSignThisToken" : null,
+        "signatureIntact" : false,
+        "signatureValid" : false
+      },
+      "signingCertificate" : {
+        "attributePresent" : true,
+        "digestValuePresent" : true,
+        "digestValueMatch" : true,
+        "issuerSerialMatch" : true,
+        "id" : "C89B03BE1F0232DCD164D0F1E126C1DF055E5F7DC2082CB2CFB199CE45AF6497"
+      },
+      "certificateChain" : [ {
+        "source" : "SIGNATURE",
+        "id" : "C89B03BE1F0232DCD164D0F1E126C1DF055E5F7DC2082CB2CFB199CE45AF6497"
+      }, {
+        "source" : "TRUSTED_STORE",
+        "id" : "45877EFD70093B5BB366FFC6FCF0D5B7EFFE1C0EC1DE4D54E1067D8B5FEB1F5C"
+      }, {
+        "source" : "TRUSTED_STORE",
+        "id" : "379368F78E9937A8B0BB723E999950861275120D6775324E37A70CF169760A64"
+      }, {
+        "source" : "TRUSTED_STORE",
+        "id" : "4FBA9F8B2BF70D947FF847C15FBA65133884018A9BB2B2E209B833C93F57B67C"
+      } ],
+      "contentType" : "text/xml",
+      "contentIdentifier" : null,
+      "contentHints" : null,
+      "signatureProductionPlace" : null,
+      "commitmentTypeIndication" : [ ],
+      "claimedRoles" : [ "CEO" ],
+      "certifiedRoles" : [ ],
+      "policy" : {
+        "id" : "urn:2.16.788.1.2.1",
+        "url" : "http://www.tradenet.com.tn/portal/telechargerTelechargement?lien=Politique_de_Signature_de_la_facture_electronique.pdf",
+        "notice" : null,
+        "digestAlgoAndValue" : {
+          "digestMethod" : "SHA256",
+          "digestValue" : "3J1oMkha+OAlm9hBNCcAS+/nbKokG8Gf9N3XPipP7yg="
+        },
+        "asn1Processable" : false,
+        "identified" : false,
+        "status" : false,
+        "processingError" : "",
+        "digestAlgorithmsEqual" : false
+      },
+      "timestamps" : [ ],
+      "signatureScopes" : [ {
+        "value" : "The full XML file with transformations: ; XPath filtering; ; XPath filtering; ; Exclusive Canonical XML (omits comments); .",
+        "name" : "Full XML File",
+        "scope" : "FULL"
+      } ],
+      "id" : "SigFrs",
+      "counterSignature" : null
+    }, {
+      "signatureFilename" : "signed.xml",
+      "parentId" : null,
+      "errorMessage" : null,
+      "dateTime" : 1600256396000,
+      "signatureFormat" : "XAdES-BASELINE-B",
+      "structuralValidation" : {
+        "valid" : true,
+        "message" : null
+      },
+      "digestMatchers" : [ {
+        "digestMethod" : "SHA256",
+        "digestValue" : "VbxzuqvCIhxQ/S/iV1P7fFkogYukQTbZQcV6dWCRSG0=",
+        "dataFound" : true,
+        "dataIntact" : false,
+        "type" : "REFERENCE",
+        "name" : "r-id-ttn"
+      }, {
+        "digestMethod" : "SHA256",
+        "digestValue" : "RZwuZwRI05UjWrBd1maRtYtEz17PiwLOn+TxKVMB0Mw=",
+        "dataFound" : true,
+        "dataIntact" : false,
+        "type" : "SIGNED_PROPERTIES",
+        "name" : "#xades-SigTTN"
+      } ],
+      "basicSignature" : {
+        "encryptionAlgoUsedToSignThisToken" : "RSA",
+        "keyLengthUsedToSignThisToken" : "2048",
+        "digestAlgoUsedToSignThisToken" : "SHA256",
+        "maskGenerationFunctionUsedToSignThisToken" : null,
+        "signatureIntact" : false,
+        "signatureValid" : false
+      },
+      "signingCertificate" : {
+        "attributePresent" : true,
+        "digestValuePresent" : true,
+        "digestValueMatch" : true,
+        "issuerSerialMatch" : true,
+        "id" : "4357DB3B121E5FDC038E9BEC60C80F7EE8B2CDAC736A39E3FD32DE58EA2FF0E5"
+      },
+      "certificateChain" : [ {
+        "source" : "SIGNATURE",
+        "id" : "4357DB3B121E5FDC038E9BEC60C80F7EE8B2CDAC736A39E3FD32DE58EA2FF0E5"
+      }, {
+        "source" : "TRUSTED_STORE",
+        "id" : "45877EFD70093B5BB366FFC6FCF0D5B7EFFE1C0EC1DE4D54E1067D8B5FEB1F5C"
+      }, {
+        "source" : "TRUSTED_STORE",
+        "id" : "379368F78E9937A8B0BB723E999950861275120D6775324E37A70CF169760A64"
+      }, {
+        "source" : "TRUSTED_STORE",
+        "id" : "4FBA9F8B2BF70D947FF847C15FBA65133884018A9BB2B2E209B833C93F57B67C"
+      } ],
+      "contentType" : "text/xml",
+      "contentIdentifier" : null,
+      "contentHints" : null,
+      "signatureProductionPlace" : null,
+      "commitmentTypeIndication" : [ ],
+      "claimedRoles" : [ "KERNEL" ],
+      "certifiedRoles" : [ ],
+      "policy" : {
+        "id" : "urn:2.16.788.1.2.1",
+        "url" : "http://www.tradenet.com.tn/portal/telechargerTelechargement?lien=Politique_de_Signature_de_la_facture_electronique.pdf",
+        "notice" : null,
+        "digestAlgoAndValue" : {
+          "digestMethod" : "SHA256",
+          "digestValue" : "hHzx6VVz53xdLygRU5RUh5YKFuRix57SGWfA1Hc96IA="
+        },
+        "asn1Processable" : false,
+        "identified" : false,
+        "status" : false,
+        "processingError" : "",
+        "digestAlgorithmsEqual" : false
+      },
+      "timestamps" : [ ],
+      "signatureScopes" : [ {
+        "value" : "The full XML file with transformations: ; XPath filtering; ; Exclusive Canonical XML (omits comments); .",
+        "name" : "Full XML File",
+        "scope" : "FULL"
+      } ],
+      "id" : "SigTTN",
+      "counterSignature" : null
+    }, {
+      "signatureFilename" : "signed.xml",
+      "parentId" : null,
+      "errorMessage" : null,
+      "dateTime" : 1756556194000,
+      "signatureFormat" : "XAdES-BASELINE-B",
+      "structuralValidation" : {
+        "valid" : true,
+        "message" : null
+      },
+      "digestMatchers" : [ {
+        "digestMethod" : "SHA256",
+        "digestValue" : "h0FCl/b3SV33qP2hlP3rO2H6kQwmhxdMzY4NE9dEoQ8=",
+        "dataFound" : true,
+        "dataIntact" : false,
+        "type" : "REFERENCE",
+        "name" : "r-id-frs"
+      }, {
+        "digestMethod" : "SHA256",
+        "digestValue" : "N8d6CWZwi4BQGoKEyKHSDk3SaZtabL9XkTryqYxTdS4=",
+        "dataFound" : false,
+        "dataIntact" : true,
+        "type" : "SIGNED_PROPERTIES",
+        "name" : "#xades-SigFrs"
+      }, {
+        "digestMethod" : null,
+        "digestValue" : null,
+        "dataFound" : false,
+        "dataIntact" : false,
+        "type" : "SIGNED_PROPERTIES",
+        "name" : null
+      } ],
+      "basicSignature" : {
+        "encryptionAlgoUsedToSignThisToken" : "RSA",
+        "keyLengthUsedToSignThisToken" : "2048",
+        "digestAlgoUsedToSignThisToken" : "SHA256",
+        "maskGenerationFunctionUsedToSignThisToken" : null,
+        "signatureIntact" : false,
+        "signatureValid" : false
+      },
+      "signingCertificate" : {
+        "attributePresent" : true,
+        "digestValuePresent" : true,
+        "digestValueMatch" : true,
+        "issuerSerialMatch" : true,
+        "id" : "57A96D61FF452F5D2C9C7F962EF1F023124F72A293B87D4E3C8850448DAB2FC9"
+      },
+      "certificateChain" : [ {
+        "source" : "SIGNATURE",
+        "id" : "57A96D61FF452F5D2C9C7F962EF1F023124F72A293B87D4E3C8850448DAB2FC9"
+      }, {
+        "source" : "TRUSTED_STORE",
+        "id" : "20522A618569C4CCEB8BAAD6F7536A1ECDABAF0F72C3A9BE2A228BC833A2EAC7"
+      } ],
+      "contentType" : "text/xml",
+      "contentIdentifier" : null,
+      "contentHints" : null,
+      "signatureProductionPlace" : null,
+      "commitmentTypeIndication" : [ ],
+      "claimedRoles" : [ "Fournisseur" ],
+      "certifiedRoles" : [ ],
+      "policy" : {
+        "id" : "2.16.788.1.2.1.1",
+        "url" : "https://www.tradenet.com.tn/wp-content/uploads/simple-file-list/Politique_de_Signature_de_la_facture_2.0.pdf",
+        "notice" : null,
+        "digestAlgoAndValue" : {
+          "digestMethod" : "SHA256",
+          "digestValue" : "3J1oMkha+OAlm9hBNCcAS+/nbKokG8Gf9N3XPipP7yg="
+        },
+        "asn1Processable" : false,
+        "identified" : false,
+        "status" : false,
+        "processingError" : "",
+        "digestAlgorithmsEqual" : false
+      },
+      "timestamps" : [ ],
+      "signatureScopes" : [ {
+        "value" : "The full XML file with transformations: XPath filtering; XPath filtering; Exclusive Canonical XML (omits comments).",
+        "name" : "Full XML File",
+        "scope" : "FULL"
+      } ],
+      "id" : "SigFrs",
+      "counterSignature" : null
+    } ],
+    "usedCertificates" : [ {
+      "subjectDistinguishedName" : [ {
+        "value" : "1.2.840.113549.1.9.1=#162066697261732e62656e616264616c6c614074726164656e65742e636f6d2e746e,uid=64395c7633dfda6106f14270a4de18eb813b0f4d0c3615989603c5207a6f1156,cn=firas ben abdallah,ou=tn-0736202x,o=tunisie trade net,c=tn",
+        "format" : "CANONICAL"
+      }, {
+        "value" : "1.2.840.113549.1.9.1=#162066697261732e62656e616264616c6c614074726164656e65742e636f6d2e746e,UID=64395c7633dfda6106f14270a4de18eb813b0f4d0c3615989603c5207a6f1156,CN=FIRAS BEN ABDALLAH,OU=TN-0736202X,O=TUNISIE TRADE NET,C=TN",
+        "format" : "RFC2253"
+      } ],
+      "issuerDistinguishedName" : [ {
+        "value" : "cn=tntrust qualified gov ca,o=national digital certification agency,l=tunis,c=tn",
+        "format" : "CANONICAL"
+      }, {
+        "value" : "CN=TnTrust Qualified Gov CA,O=National Digital Certification Agency,L=Tunis,C=TN",
+        "format" : "RFC2253"
+      } ],
+      "serialNumber" : 390976413130116160,
+      "commonName" : "FIRAS BEN ABDALLAH",
+      "locality" : null,
+      "state" : null,
+      "countryName" : "TN",
+      "organizationName" : "TUNISIE TRADE NET",
+      "givenName" : null,
+      "organizationalUnit" : "TN-0736202X",
+      "surname" : null,
+      "pseudonym" : null,
+      "email" : "firas.benabdalla@tradenet.com.tn",
+      "authorityInformationAccessUrls" : [ "http://www.tuntrust.tn/pub/TnTrustQualifiedGovCA.crt" ],
+      "digestAlgoAndValues" : [ ],
+      "notAfter" : 1625380666000,
+      "notBefore" : 1562308666000,
+      "publicKeySize" : 2048,
+      "publicKeyEncryptionAlgo" : "RSA",
+      "keyUsageBits" : [ "digitalSignature", "nonRepudiation" ],
+      "extendedKeyUsages" : [ {
+        "value" : "1.3.6.1.5.5.7.3.2",
+        "description" : "clientAuth"
+      }, {
+        "value" : "1.3.6.1.5.5.7.3.4",
+        "description" : "emailProtection"
+      }, {
+        "value" : "1.3.6.1.4.1.311.20.2.2",
+        "description" : null
+      } ],
+      "idPkixOcspNoCheck" : false,
+      "basicSignature" : {
+        "encryptionAlgoUsedToSignThisToken" : "RSA",
+        "keyLengthUsedToSignThisToken" : "3072",
+        "digestAlgoUsedToSignThisToken" : "SHA256",
+        "maskGenerationFunctionUsedToSignThisToken" : null,
+        "signatureIntact" : true,
+        "signatureValid" : true
+      },
+      "signingCertificate" : {
+        "attributePresent" : null,
+        "digestValuePresent" : null,
+        "digestValueMatch" : null,
+        "issuerSerialMatch" : null,
+        "id" : "45877EFD70093B5BB366FFC6FCF0D5B7EFFE1C0EC1DE4D54E1067D8B5FEB1F5C"
+      },
+      "certificateChain" : [ {
+        "source" : "TRUSTED_STORE",
+        "id" : "45877EFD70093B5BB366FFC6FCF0D5B7EFFE1C0EC1DE4D54E1067D8B5FEB1F5C"
+      }, {
+        "source" : "TRUSTED_STORE",
+        "id" : "379368F78E9937A8B0BB723E999950861275120D6775324E37A70CF169760A64"
+      }, {
+        "source" : "TRUSTED_STORE",
+        "id" : "4FBA9F8B2BF70D947FF847C15FBA65133884018A9BB2B2E209B833C93F57B67C"
+      } ],
+      "trusted" : false,
+      "selfSigned" : false,
+      "certificatePolicies" : [ {
+        "value" : "0.4.0.2042.1.2",
+        "description" : "normalized-certificate-policy-sscd",
+        "cpsUrl" : null
+      }, {
+        "value" : "2.16.788.1.2.6.1.10.1.1",
+        "description" : null,
+        "cpsUrl" : null
+      }, {
+        "value" : "0.4.0.194112.1.2",
+        "description" : "qcp-natural-qscd",
+        "cpsUrl" : null
+      } ],
+      "trustedServiceProviders" : [ ],
+      "revocations" : [ ],
+      "base64Encoded" : null,
+      "id" : "C89B03BE1F0232DCD164D0F1E126C1DF055E5F7DC2082CB2CFB199CE45AF6497",
+      "qcstatementIds" : [ {
+        "value" : "0.4.0.1862.1.1",
+        "description" : "qc-compliance"
+      }, {
+        "value" : "0.4.0.1862.1.4",
+        "description" : "qc-sscd"
+      }, {
+        "value" : "0.4.0.1862.1.6",
+        "description" : null
+      }, {
+        "value" : "0.4.0.1862.1.5",
+        "description" : "qc-pds"
+      } ],
+      "ocspaccessUrls" : [ "http://va.tuntrust.tn" ],
+      "crldistributionPoints" : [ "http://crl.tuntrust.tn/tntrustqualifiedgovca.crl" ],
+      "qctypes" : [ {
+        "value" : "0.4.0.1862.1.6.1",
+        "description" : "qc-type-esign"
+      } ]
+    }, {
+      "subjectDistinguishedName" : [ {
+        "value" : "cn=tunisia national root ca,o=national digital certification agency,l=tunis,c=tn",
+        "format" : "CANONICAL"
+      }, {
+        "value" : "CN=Tunisia National Root CA,O=National Digital Certification Agency,L=Tunis,C=TN",
+        "format" : "RFC2253"
+      } ],
+      "issuerDistinguishedName" : [ {
+        "value" : "cn=tunisia national root ca,o=national digital certification agency,l=tunis,c=tn",
+        "format" : "CANONICAL"
+      }, {
+        "value" : "CN=Tunisia National Root CA,O=National Digital Certification Agency,L=Tunis,C=TN",
+        "format" : "RFC2253"
+      } ],
+      "serialNumber" : 7511460287730192014,
+      "commonName" : "Tunisia National Root CA",
+      "locality" : "Tunis",
+      "state" : null,
+      "countryName" : "TN",
+      "organizationName" : "National Digital Certification Agency",
+      "givenName" : null,
+      "organizationalUnit" : null,
+      "surname" : null,
+      "pseudonym" : null,
+      "email" : null,
+      "authorityInformationAccessUrls" : [ ],
+      "digestAlgoAndValues" : [ ],
+      "notAfter" : 2127200576000,
+      "notBefore" : 1480410176000,
+      "publicKeySize" : 4096,
+      "publicKeyEncryptionAlgo" : "RSA",
+      "keyUsageBits" : [ "digitalSignature", "keyCertSign", "crlSign" ],
+      "extendedKeyUsages" : [ ],
+      "idPkixOcspNoCheck" : false,
+      "basicSignature" : {
+        "encryptionAlgoUsedToSignThisToken" : "RSA",
+        "keyLengthUsedToSignThisToken" : "4096",
+        "digestAlgoUsedToSignThisToken" : "SHA256",
+        "maskGenerationFunctionUsedToSignThisToken" : null,
+        "signatureIntact" : true,
+        "signatureValid" : true
+      },
+      "signingCertificate" : null,
+      "certificateChain" : [ ],
+      "trusted" : true,
+      "selfSigned" : true,
+      "certificatePolicies" : [ ],
+      "trustedServiceProviders" : [ ],
+      "revocations" : [ ],
+      "base64Encoded" : null,
+      "id" : "4FBA9F8B2BF70D947FF847C15FBA65133884018A9BB2B2E209B833C93F57B67C",
+      "qcstatementIds" : [ ],
+      "ocspaccessUrls" : [ "http://va.certification.tn" ],
+      "crldistributionPoints" : [ "http://crl.certification.tn/tunrootca.crl" ],
+      "qctypes" : [ ]
+    }, {
+      "subjectDistinguishedName" : [ {
+        "value" : "c=tn,l=tunis,o=national digital certification agency,cn=vatest2",
+        "format" : "CANONICAL"
+      }, {
+        "value" : "C=TN,L=Tunis,O=National Digital Certification Agency,CN=vatest2",
+        "format" : "RFC2253"
+      } ],
+      "issuerDistinguishedName" : [ {
+        "value" : "c=tn,l=tunis,o=national digital certification agency,cn=tntrust qualified gov ca test",
+        "format" : "CANONICAL"
+      }, {
+        "value" : "C=TN,L=Tunis,O=National Digital Certification Agency,CN=TnTrust Qualified Gov CA Test",
+        "format" : "RFC2253"
+      } ],
+      "serialNumber" : 322669592978285500779821744929521634171629660546,
+      "commonName" : "vatest2",
+      "locality" : "Tunis",
+      "state" : null,
+      "countryName" : "TN",
+      "organizationName" : "National Digital Certification Agency",
+      "givenName" : null,
+      "organizationalUnit" : null,
+      "surname" : null,
+      "pseudonym" : null,
+      "email" : null,
+      "authorityInformationAccessUrls" : [ ],
+      "digestAlgoAndValues" : [ ],
+      "notAfter" : 1797674170000,
+      "notBefore" : 1734602171000,
+      "publicKeySize" : 2048,
+      "publicKeyEncryptionAlgo" : "RSA",
+      "keyUsageBits" : [ "digitalSignature" ],
+      "extendedKeyUsages" : [ {
+        "value" : "1.3.6.1.5.5.7.3.9",
+        "description" : "ocspSigning"
+      } ],
+      "idPkixOcspNoCheck" : true,
+      "basicSignature" : {
+        "encryptionAlgoUsedToSignThisToken" : "RSA",
+        "keyLengthUsedToSignThisToken" : "4096",
+        "digestAlgoUsedToSignThisToken" : "SHA256",
+        "maskGenerationFunctionUsedToSignThisToken" : null,
+        "signatureIntact" : true,
+        "signatureValid" : true
+      },
+      "signingCertificate" : {
+        "attributePresent" : null,
+        "digestValuePresent" : null,
+        "digestValueMatch" : null,
+        "issuerSerialMatch" : null,
+        "id" : "20522A618569C4CCEB8BAAD6F7536A1ECDABAF0F72C3A9BE2A228BC833A2EAC7"
+      },
+      "certificateChain" : [ {
+        "source" : "TRUSTED_STORE",
+        "id" : "20522A618569C4CCEB8BAAD6F7536A1ECDABAF0F72C3A9BE2A228BC833A2EAC7"
+      } ],
+      "trusted" : false,
+      "selfSigned" : false,
+      "certificatePolicies" : [ {
+        "value" : "2.16.788.1.2.6.1.9",
+        "description" : null,
+        "cpsUrl" : null
+      } ],
+      "trustedServiceProviders" : [ ],
+      "revocations" : [ ],
+      "base64Encoded" : null,
+      "id" : "62765C9897D674603811D27C4C2ACED095B9BDFD5DB9CE69D118BE9A58A7DD1A",
+      "qcstatementIds" : [ ],
+      "ocspaccessUrls" : [ ],
+      "crldistributionPoints" : [ ],
+      "qctypes" : [ ]
+    }, {
+      "subjectDistinguishedName" : [ {
+        "value" : "cn=tunisie tradenet,ou=elfatoora test,2.5.4.97=#0c0e564154544e2d3037333632303258,o=tunisie tradenet,c=tn",
+        "format" : "CANONICAL"
+      }, {
+        "value" : "CN=TUNISIE TRADENET,OU=ELFATOORA TEST,2.5.4.97=#0c0e564154544e2d3037333632303258,O=TUNISIE TRADENET,C=TN",
+        "format" : "RFC2253"
+      } ],
+      "issuerDistinguishedName" : [ {
+        "value" : "cn=tntrust qualified gov ca,o=national digital certification agency,l=tunis,c=tn",
+        "format" : "CANONICAL"
+      }, {
+        "value" : "CN=TnTrust Qualified Gov CA,O=National Digital Certification Agency,L=Tunis,C=TN",
+        "format" : "RFC2253"
+      } ],
+      "serialNumber" : 7276179037950926614,
+      "commonName" : "TUNISIE TRADENET",
+      "locality" : null,
+      "state" : null,
+      "countryName" : "TN",
+      "organizationName" : "TUNISIE TRADENET",
+      "givenName" : null,
+      "organizationalUnit" : "ELFATOORA TEST",
+      "surname" : null,
+      "pseudonym" : null,
+      "email" : null,
+      "authorityInformationAccessUrls" : [ "http://www.tuntrust.tn/pub/TnTrustQualifiedGovCA.crt" ],
+      "digestAlgoAndValues" : [ ],
+      "notAfter" : 1621589127000,
+      "notBefore" : 1558517127000,
+      "publicKeySize" : 2048,
+      "publicKeyEncryptionAlgo" : "RSA",
+      "keyUsageBits" : [ "digitalSignature", "nonRepudiation" ],
+      "extendedKeyUsages" : [ ],
+      "idPkixOcspNoCheck" : false,
+      "basicSignature" : {
+        "encryptionAlgoUsedToSignThisToken" : "RSA",
+        "keyLengthUsedToSignThisToken" : "3072",
+        "digestAlgoUsedToSignThisToken" : "SHA256",
+        "maskGenerationFunctionUsedToSignThisToken" : null,
+        "signatureIntact" : true,
+        "signatureValid" : true
+      },
+      "signingCertificate" : {
+        "attributePresent" : null,
+        "digestValuePresent" : null,
+        "digestValueMatch" : null,
+        "issuerSerialMatch" : null,
+        "id" : "45877EFD70093B5BB366FFC6FCF0D5B7EFFE1C0EC1DE4D54E1067D8B5FEB1F5C"
+      },
+      "certificateChain" : [ {
+        "source" : "TRUSTED_STORE",
+        "id" : "45877EFD70093B5BB366FFC6FCF0D5B7EFFE1C0EC1DE4D54E1067D8B5FEB1F5C"
+      }, {
+        "source" : "TRUSTED_STORE",
+        "id" : "379368F78E9937A8B0BB723E999950861275120D6775324E37A70CF169760A64"
+      }, {
+        "source" : "TRUSTED_STORE",
+        "id" : "4FBA9F8B2BF70D947FF847C15FBA65133884018A9BB2B2E209B833C93F57B67C"
+      } ],
+      "trusted" : false,
+      "selfSigned" : false,
+      "certificatePolicies" : [ {
+        "value" : "0.4.0.2042.1.2",
+        "description" : "normalized-certificate-policy-sscd",
+        "cpsUrl" : null
+      }, {
+        "value" : "0.4.0.194112.1.3",
+        "description" : "qcp-legal-qscd",
+        "cpsUrl" : null
+      }, {
+        "value" : "2.16.788.1.2.6.1.10.1.2",
+        "description" : null,
+        "cpsUrl" : null
+      } ],
+      "trustedServiceProviders" : [ ],
+      "revocations" : [ ],
+      "base64Encoded" : null,
+      "id" : "4357DB3B121E5FDC038E9BEC60C80F7EE8B2CDAC736A39E3FD32DE58EA2FF0E5",
+      "qcstatementIds" : [ {
+        "value" : "0.4.0.1862.1.1",
+        "description" : "qc-compliance"
+      }, {
+        "value" : "0.4.0.1862.1.4",
+        "description" : "qc-sscd"
+      }, {
+        "value" : "0.4.0.1862.1.6",
+        "description" : null
+      }, {
+        "value" : "0.4.0.1862.1.5",
+        "description" : "qc-pds"
+      } ],
+      "ocspaccessUrls" : [ "http://va.tuntrust.tn" ],
+      "crldistributionPoints" : [ "http://crl.tuntrust.tn/tntrustqualifiedgovca.crl" ],
+      "qctypes" : [ {
+        "value" : "0.4.0.1862.1.6.2",
+        "description" : "qc-type-eseal"
+      } ]
+    }, {
+      "subjectDistinguishedName" : [ {
+        "value" : "cn=tunisia gov ca,o=national digital certification agency,l=tunis,c=tn",
+        "format" : "CANONICAL"
+      }, {
+        "value" : "CN=Tunisia Gov CA,O=National Digital Certification Agency,L=Tunis,C=TN",
+        "format" : "RFC2253"
+      } ],
+      "issuerDistinguishedName" : [ {
+        "value" : "cn=tunisia national root ca,o=national digital certification agency,l=tunis,c=tn",
+        "format" : "CANONICAL"
+      }, {
+        "value" : "CN=Tunisia National Root CA,O=National Digital Certification Agency,L=Tunis,C=TN",
+        "format" : "RFC2253"
+      } ],
+      "serialNumber" : 8659313816565861358,
+      "commonName" : "Tunisia Gov CA",
+      "locality" : "Tunis",
+      "state" : null,
+      "countryName" : "TN",
+      "organizationName" : "National Digital Certification Agency",
+      "givenName" : null,
+      "organizationalUnit" : null,
+      "surname" : null,
+      "pseudonym" : null,
+      "email" : null,
+      "authorityInformationAccessUrls" : [ ],
+      "digestAlgoAndValues" : [ ],
+      "notAfter" : 1961660115000,
+      "notBefore" : 1480412115000,
+      "publicKeySize" : 4096,
+      "publicKeyEncryptionAlgo" : "RSA",
+      "keyUsageBits" : [ "digitalSignature", "keyCertSign", "crlSign" ],
+      "extendedKeyUsages" : [ ],
+      "idPkixOcspNoCheck" : false,
+      "basicSignature" : {
+        "encryptionAlgoUsedToSignThisToken" : "RSA",
+        "keyLengthUsedToSignThisToken" : "4096",
+        "digestAlgoUsedToSignThisToken" : "SHA256",
+        "maskGenerationFunctionUsedToSignThisToken" : null,
+        "signatureIntact" : true,
+        "signatureValid" : true
+      },
+      "signingCertificate" : {
+        "attributePresent" : null,
+        "digestValuePresent" : null,
+        "digestValueMatch" : null,
+        "issuerSerialMatch" : null,
+        "id" : "4FBA9F8B2BF70D947FF847C15FBA65133884018A9BB2B2E209B833C93F57B67C"
+      },
+      "certificateChain" : [ {
+        "source" : "TRUSTED_STORE",
+        "id" : "4FBA9F8B2BF70D947FF847C15FBA65133884018A9BB2B2E209B833C93F57B67C"
+      } ],
+      "trusted" : true,
+      "selfSigned" : false,
+      "certificatePolicies" : [ {
+        "value" : "2.16.788.1.2.6.1.9",
+        "description" : null,
+        "cpsUrl" : null
+      } ],
+      "trustedServiceProviders" : [ ],
+      "revocations" : [ ],
+      "base64Encoded" : null,
+      "id" : "379368F78E9937A8B0BB723E999950861275120D6775324E37A70CF169760A64",
+      "qcstatementIds" : [ ],
+      "ocspaccessUrls" : [ "http://va.certification.tn" ],
+      "crldistributionPoints" : [ "http://crl.certification.tn/tunrootca.crl" ],
+      "qctypes" : [ ]
+    }, {
+      "subjectDistinguishedName" : [ {
+        "value" : "c=tn,l=tunis,o=national digital certification agency,cn=tntrust qualified gov ca test",
+        "format" : "CANONICAL"
+      }, {
+        "value" : "C=TN,L=Tunis,O=National Digital Certification Agency,CN=TnTrust Qualified Gov CA Test",
+        "format" : "RFC2253"
+      } ],
+      "issuerDistinguishedName" : [ {
+        "value" : "c=tn,l=tunis,o=national digital certification agency,cn=tntrust qualified gov ca test",
+        "format" : "CANONICAL"
+      }, {
+        "value" : "C=TN,L=Tunis,O=National Digital Certification Agency,CN=TnTrust Qualified Gov CA Test",
+        "format" : "RFC2253"
+      } ],
+      "serialNumber" : 333254904704534584837858582136340606909420073867,
+      "commonName" : "TnTrust Qualified Gov CA Test",
+      "locality" : "Tunis",
+      "state" : null,
+      "countryName" : "TN",
+      "organizationName" : "National Digital Certification Agency",
+      "givenName" : null,
+      "organizationalUnit" : null,
+      "surname" : null,
+      "pseudonym" : null,
+      "email" : null,
+      "authorityInformationAccessUrls" : [ ],
+      "digestAlgoAndValues" : [ ],
+      "notAfter" : 2365842485000,
+      "notBefore" : 1577442485000,
+      "publicKeySize" : 4096,
+      "publicKeyEncryptionAlgo" : "RSA",
+      "keyUsageBits" : [ "digitalSignature", "keyCertSign", "crlSign" ],
+      "extendedKeyUsages" : [ ],
+      "idPkixOcspNoCheck" : false,
+      "basicSignature" : {
+        "encryptionAlgoUsedToSignThisToken" : "RSA",
+        "keyLengthUsedToSignThisToken" : "4096",
+        "digestAlgoUsedToSignThisToken" : "SHA256",
+        "maskGenerationFunctionUsedToSignThisToken" : null,
+        "signatureIntact" : true,
+        "signatureValid" : true
+      },
+      "signingCertificate" : null,
+      "certificateChain" : [ ],
+      "trusted" : true,
+      "selfSigned" : true,
+      "certificatePolicies" : [ ],
+      "trustedServiceProviders" : [ ],
+      "revocations" : [ ],
+      "base64Encoded" : null,
+      "id" : "20522A618569C4CCEB8BAAD6F7536A1ECDABAF0F72C3A9BE2A228BC833A2EAC7",
+      "qcstatementIds" : [ ],
+      "ocspaccessUrls" : [ ],
+      "crldistributionPoints" : [ ],
+      "qctypes" : [ ]
+    }, {
+      "subjectDistinguishedName" : [ {
+        "value" : "c=tn,o=iconetest,2.5.4.4=#0c0454455354,2.5.4.42=#0c0549434f4e45,cn=icone test,uid=1dc6865af0755579bce4b2e1d4868cdedba41890e63b06a1f933551796115ae7,1.2.840.113549.1.9.1=#161d746168616e692e6d61726b614063657274696669636174696f6e2e746e",
+        "format" : "CANONICAL"
+      }, {
+        "value" : "C=TN,O=ICONETEST,2.5.4.4=#0c0454455354,2.5.4.42=#0c0549434f4e45,CN=ICONE TEST,UID=1dc6865af0755579bce4b2e1d4868cdedba41890e63b06a1f933551796115ae7,1.2.840.113549.1.9.1=#161d746168616e692e6d61726b614063657274696669636174696f6e2e746e",
+        "format" : "RFC2253"
+      } ],
+      "issuerDistinguishedName" : [ {
+        "value" : "c=tn,l=tunis,o=national digital certification agency,cn=tntrust qualified gov ca test",
+        "format" : "CANONICAL"
+      }, {
+        "value" : "C=TN,L=Tunis,O=National Digital Certification Agency,CN=TnTrust Qualified Gov CA Test",
+        "format" : "RFC2253"
+      } ],
+      "serialNumber" : 198780419694888767290432575426734403682839022603,
+      "commonName" : "ICONE TEST",
+      "locality" : null,
+      "state" : null,
+      "countryName" : "TN",
+      "organizationName" : "ICONETEST",
+      "givenName" : "ICONE",
+      "organizationalUnit" : null,
+      "surname" : "TEST",
+      "pseudonym" : null,
+      "email" : "tahani.marka@certification.tn",
+      "authorityInformationAccessUrls" : [ "http://crltest.tuntrust.tn/pub/TnTrustQualifiedGovCATest.crt" ],
+      "digestAlgoAndValues" : [ ],
+      "notAfter" : 1758363776000,
+      "notBefore" : 1755771777000,
+      "publicKeySize" : 2048,
+      "publicKeyEncryptionAlgo" : "RSA",
+      "keyUsageBits" : [ "digitalSignature", "nonRepudiation" ],
+      "extendedKeyUsages" : [ {
+        "value" : "1.3.6.1.5.5.7.3.2",
+        "description" : "clientAuth"
+      }, {
+        "value" : "1.3.6.1.5.5.7.3.4",
+        "description" : "emailProtection"
+      }, {
+        "value" : "1.3.6.1.4.1.311.20.2.2",
+        "description" : null
+      } ],
+      "idPkixOcspNoCheck" : false,
+      "basicSignature" : {
+        "encryptionAlgoUsedToSignThisToken" : "RSA",
+        "keyLengthUsedToSignThisToken" : "4096",
+        "digestAlgoUsedToSignThisToken" : "SHA256",
+        "maskGenerationFunctionUsedToSignThisToken" : null,
+        "signatureIntact" : true,
+        "signatureValid" : true
+      },
+      "signingCertificate" : {
+        "attributePresent" : null,
+        "digestValuePresent" : null,
+        "digestValueMatch" : null,
+        "issuerSerialMatch" : null,
+        "id" : "20522A618569C4CCEB8BAAD6F7536A1ECDABAF0F72C3A9BE2A228BC833A2EAC7"
+      },
+      "certificateChain" : [ {
+        "source" : "TRUSTED_STORE",
+        "id" : "20522A618569C4CCEB8BAAD6F7536A1ECDABAF0F72C3A9BE2A228BC833A2EAC7"
+      } ],
+      "trusted" : false,
+      "selfSigned" : false,
+      "certificatePolicies" : [ ],
+      "trustedServiceProviders" : [ ],
+      "revocations" : [ {
+        "origin" : "EXTERNAL",
+        "source" : "OCSPToken",
+        "sourceAddress" : "http://vatest.tuntrust.tn",
+        "available" : true,
+        "status" : true,
+        "reason" : null,
+        "productionDate" : 1756551625000,
+        "thisUpdate" : 1756551625000,
+        "nextUpdate" : null,
+        "revocationDate" : null,
+        "expiredCertsOnCRL" : null,
+        "archiveCutOff" : null,
+        "certHashExtensionPresent" : null,
+        "certHashExtensionMatch" : null,
+        "digestAlgoAndValues" : [ ],
+        "basicSignature" : {
+          "encryptionAlgoUsedToSignThisToken" : "RSA",
+          "keyLengthUsedToSignThisToken" : "2048",
+          "digestAlgoUsedToSignThisToken" : "SHA256",
+          "maskGenerationFunctionUsedToSignThisToken" : null,
+          "signatureIntact" : true,
+          "signatureValid" : true
+        },
+        "signingCertificate" : {
+          "attributePresent" : null,
+          "digestValuePresent" : null,
+          "digestValueMatch" : null,
+          "issuerSerialMatch" : null,
+          "id" : "62765C9897D674603811D27C4C2ACED095B9BDFD5DB9CE69D118BE9A58A7DD1A"
+        },
+        "certificateChain" : [ {
+          "source" : "OCSP_RESPONSE",
+          "id" : "62765C9897D674603811D27C4C2ACED095B9BDFD5DB9CE69D118BE9A58A7DD1A"
+        }, {
+          "source" : "TRUSTED_STORE",
+          "id" : "20522A618569C4CCEB8BAAD6F7536A1ECDABAF0F72C3A9BE2A228BC833A2EAC7"
+        } ],
+        "base64Encoded" : null,
+        "id" : "57a96d61ff452f5d2c9c7f962ef1f023124f72a293b87d4e3c8850448dab2fc97e5fd0fdba06595e5c16e760e3ab908aae5db27b87c953fdb7558af12aa4d71d"
+      } ],
+      "base64Encoded" : null,
+      "id" : "57A96D61FF452F5D2C9C7F962EF1F023124F72A293B87D4E3C8850448DAB2FC9",
+      "qcstatementIds" : [ ],
+      "ocspaccessUrls" : [ "http://vatest.tuntrust.tn" ],
+      "crldistributionPoints" : [ "http://crltest.tuntrust.tn/TnTrustQualifiedGovCATest.crl" ],
+      "qctypes" : [ ]
+    }, {
+      "subjectDistinguishedName" : [ {
+        "value" : "cn=tntrust qualified gov ca,o=national digital certification agency,l=tunis,c=tn",
+        "format" : "CANONICAL"
+      }, {
+        "value" : "CN=TnTrust Qualified Gov CA,O=National Digital Certification Agency,L=Tunis,C=TN",
+        "format" : "RFC2253"
+      } ],
+      "issuerDistinguishedName" : [ {
+        "value" : "cn=tunisia gov ca,o=national digital certification agency,l=tunis,c=tn",
+        "format" : "CANONICAL"
+      }, {
+        "value" : "CN=Tunisia Gov CA,O=National Digital Certification Agency,L=Tunis,C=TN",
+        "format" : "RFC2253"
+      } ],
+      "serialNumber" : 7449908074223880151,
+      "commonName" : "TnTrust Qualified Gov CA",
+      "locality" : "Tunis",
+      "state" : null,
+      "countryName" : "TN",
+      "organizationName" : "National Digital Certification Agency",
+      "givenName" : null,
+      "organizationalUnit" : null,
+      "surname" : null,
+      "pseudonym" : null,
+      "email" : null,
+      "authorityInformationAccessUrls" : [ ],
+      "digestAlgoAndValues" : [ ],
+      "notAfter" : 1798539842000,
+      "notBefore" : 1480415042000,
+      "publicKeySize" : 3072,
+      "publicKeyEncryptionAlgo" : "RSA",
+      "keyUsageBits" : [ "digitalSignature", "keyCertSign", "crlSign" ],
+      "extendedKeyUsages" : [ ],
+      "idPkixOcspNoCheck" : false,
+      "basicSignature" : {
+        "encryptionAlgoUsedToSignThisToken" : "RSA",
+        "keyLengthUsedToSignThisToken" : "4096",
+        "digestAlgoUsedToSignThisToken" : "SHA256",
+        "maskGenerationFunctionUsedToSignThisToken" : null,
+        "signatureIntact" : true,
+        "signatureValid" : true
+      },
+      "signingCertificate" : {
+        "attributePresent" : null,
+        "digestValuePresent" : null,
+        "digestValueMatch" : null,
+        "issuerSerialMatch" : null,
+        "id" : "379368F78E9937A8B0BB723E999950861275120D6775324E37A70CF169760A64"
+      },
+      "certificateChain" : [ {
+        "source" : "TRUSTED_STORE",
+        "id" : "379368F78E9937A8B0BB723E999950861275120D6775324E37A70CF169760A64"
+      }, {
+        "source" : "TRUSTED_STORE",
+        "id" : "4FBA9F8B2BF70D947FF847C15FBA65133884018A9BB2B2E209B833C93F57B67C"
+      } ],
+      "trusted" : true,
+      "selfSigned" : false,
+      "certificatePolicies" : [ {
+        "value" : "2.16.788.1.2.6.1.10",
+        "description" : null,
+        "cpsUrl" : null
+      } ],
+      "trustedServiceProviders" : [ ],
+      "revocations" : [ ],
+      "base64Encoded" : null,
+      "id" : "45877EFD70093B5BB366FFC6FCF0D5B7EFFE1C0EC1DE4D54E1067D8B5FEB1F5C",
+      "qcstatementIds" : [ ],
+      "ocspaccessUrls" : [ "http://va.certification.tn" ],
+      "crldistributionPoints" : [ "http://crl.certification.tn/tunisiagovca.crl" ],
+      "qctypes" : [ ]
+    } ],
+    "trustedLists" : [ ],
+    "listOfTrustedLists" : null
+  },
+  "simpleReport" : {
+    "policy" : {
+      "policyName" : "QES AdESQC TL based",
+      "policyDescription" : "Validate electronic signatures and indicates whether they are Advanced electronic Signatures (AdES), AdES supported by a Qualified Certificate (AdES/QC) or a\n\t\tQualified electronic Signature (QES). All certificates and their related chains supporting the signatures are validated against the EU Member State Trusted Lists (this includes\n\t\tsigner's certificate and certificates used to validate certificate validity status services - CRLs, OCSP, and time-stamps).\n\t"
+    },
+    "validationTime" : 1756554691069,
+    "documentName" : "signed.xml",
+    "validSignaturesCount" : 0,
+    "signaturesCount" : 3,
+    "containerType" : null,
+    "signature" : [ {
+      "filename" : null,
+      "signingTime" : 1600256236000,
+      "bestSignatureTime" : 1756554691069,
+      "signedBy" : "FIRAS BEN ABDALLAH",
+      "certificateChain" : {
+        "certificate" : [ {
+          "id" : "C89B03BE1F0232DCD164D0F1E126C1DF055E5F7DC2082CB2CFB199CE45AF6497",
+          "qualifiedName" : "FIRAS BEN ABDALLAH"
+        }, {
+          "id" : "45877EFD70093B5BB366FFC6FCF0D5B7EFFE1C0EC1DE4D54E1067D8B5FEB1F5C",
+          "qualifiedName" : "TnTrust Qualified Gov CA"
+        }, {
+          "id" : "379368F78E9937A8B0BB723E999950861275120D6775324E37A70CF169760A64",
+          "qualifiedName" : "Tunisia Gov CA"
+        }, {
+          "id" : "4FBA9F8B2BF70D947FF847C15FBA65133884018A9BB2B2E209B833C93F57B67C",
+          "qualifiedName" : "Tunisia National Root CA"
+        } ]
+      },
+      "signatureLevel" : {
+        "value" : "NA",
+        "description" : "Not applicable"
+      },
+      "indication" : "INDETERMINATE",
+      "subIndication" : "SIGNATURE_POLICY_NOT_AVAILABLE",
+      "errors" : [ "The certificate path is not trusted!", "The result of the LTV validation process is not acceptable to continue the process!" ],
+      "warnings" : [ "The signature/seal is an INDETERMINATE AdES!" ],
+      "infos" : [ ],
+      "signatureScope" : [ {
+        "value" : "The full XML file with transformations: ; XPath filtering; ; XPath filtering; ; Exclusive Canonical XML (omits comments); .",
+        "name" : "Full XML File",
+        "scope" : "FULL"
+      } ],
+      "id" : "SigFrs",
+      "counterSignature" : null,
+      "parentId" : null,
+      "signatureFormat" : "XAdES-BASELINE-B"
+    }, {
+      "filename" : null,
+      "signingTime" : 1600256396000,
+      "bestSignatureTime" : 1756554691069,
+      "signedBy" : "TUNISIE TRADENET",
+      "certificateChain" : {
+        "certificate" : [ {
+          "id" : "4357DB3B121E5FDC038E9BEC60C80F7EE8B2CDAC736A39E3FD32DE58EA2FF0E5",
+          "qualifiedName" : "TUNISIE TRADENET"
+        }, {
+          "id" : "45877EFD70093B5BB366FFC6FCF0D5B7EFFE1C0EC1DE4D54E1067D8B5FEB1F5C",
+          "qualifiedName" : "TnTrust Qualified Gov CA"
+        }, {
+          "id" : "379368F78E9937A8B0BB723E999950861275120D6775324E37A70CF169760A64",
+          "qualifiedName" : "Tunisia Gov CA"
+        }, {
+          "id" : "4FBA9F8B2BF70D947FF847C15FBA65133884018A9BB2B2E209B833C93F57B67C",
+          "qualifiedName" : "Tunisia National Root CA"
+        } ]
+      },
+      "signatureLevel" : {
+        "value" : "NA",
+        "description" : "Not applicable"
+      },
+      "indication" : "INDETERMINATE",
+      "subIndication" : "SIGNATURE_POLICY_NOT_AVAILABLE",
+      "errors" : [ "The certificate path is not trusted!", "The result of the LTV validation process is not acceptable to continue the process!" ],
+      "warnings" : [ "The signature/seal is an INDETERMINATE AdES!" ],
+      "infos" : [ ],
+      "signatureScope" : [ {
+        "value" : "The full XML file with transformations: ; XPath filtering; ; Exclusive Canonical XML (omits comments); .",
+        "name" : "Full XML File",
+        "scope" : "FULL"
+      } ],
+      "id" : "SigTTN",
+      "counterSignature" : null,
+      "parentId" : null,
+      "signatureFormat" : "XAdES-BASELINE-B"
+    }, {
+      "filename" : null,
+      "signingTime" : 1756556194000,
+      "bestSignatureTime" : 1756554691069,
+      "signedBy" : "ICONE TEST",
+      "certificateChain" : {
+        "certificate" : [ {
+          "id" : "C89B03BE1F0232DCD164D0F1E126C1DF055E5F7DC2082CB2CFB199CE45AF6497",
+          "qualifiedName" : "FIRAS BEN ABDALLAH"
+        }, {
+          "id" : "45877EFD70093B5BB366FFC6FCF0D5B7EFFE1C0EC1DE4D54E1067D8B5FEB1F5C",
+          "qualifiedName" : "TnTrust Qualified Gov CA"
+        }, {
+          "id" : "379368F78E9937A8B0BB723E999950861275120D6775324E37A70CF169760A64",
+          "qualifiedName" : "Tunisia Gov CA"
+        }, {
+          "id" : "4FBA9F8B2BF70D947FF847C15FBA65133884018A9BB2B2E209B833C93F57B67C",
+          "qualifiedName" : "Tunisia National Root CA"
+        } ]
+      },
+      "signatureLevel" : {
+        "value" : "NA",
+        "description" : "Not applicable"
+      },
+      "indication" : "INDETERMINATE",
+      "subIndication" : "SIGNATURE_POLICY_NOT_AVAILABLE",
+      "errors" : [ "The certificate path is not trusted!", "The result of the LTV validation process is not acceptable to continue the process!" ],
+      "warnings" : [ "The signature/seal is an INDETERMINATE AdES!" ],
+      "infos" : [ ],
+      "signatureScope" : [ {
+        "value" : "The full XML file with transformations: XPath filtering; XPath filtering; Exclusive Canonical XML (omits comments).",
+        "name" : "Full XML File",
+        "scope" : "FULL"
+      } ],
+      "id" : "SigFrs",
+      "counterSignature" : null,
+      "parentId" : null,
+      "signatureFormat" : "XAdES-BASELINE-B"
+    } ]
+  },
+  "detailedReport" : {
+    "signatures" : [ {
+      "validationProcessBasicSignatures" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is the result of the Basic Validation Process conclusive?",
+            "nameId" : "ADEST_ROBVPIIC"
+          },
+          "status" : "NOT_OK",
+          "error" : {
+            "value" : "The result of the Basic validation process is not conclusive!",
+            "nameId" : "ADEST_ROBVPIIC_ANS"
+          },
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : "SigFrs"
+        } ],
+        "conclusion" : {
+          "indication" : "INDETERMINATE",
+          "subIndication" : "SIGNATURE_POLICY_NOT_AVAILABLE",
+          "errors" : [ {
+            "value" : "The signature policy is not available!",
+            "nameId" : "BBB_VCI_ISPA_ANS"
+          } ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        },
+        "bestSignatureTime" : 1756554691069
+      },
+      "validationProcessTimestamps" : [ ],
+      "validationProcessLongTermData" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is the result of the Basic Validation Process acceptable?",
+            "nameId" : "LTV_ABSV"
+          },
+          "status" : "NOT_OK",
+          "error" : {
+            "value" : "The result of the Basic validation process is not acceptable to continue the process!",
+            "nameId" : "LTV_ABSV_ANS"
+          },
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "INDETERMINATE",
+          "subIndication" : "SIGNATURE_POLICY_NOT_AVAILABLE",
+          "errors" : [ {
+            "value" : "The signature policy is not available!",
+            "nameId" : "BBB_VCI_ISPA_ANS"
+          } ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        },
+        "bestSignatureTime" : 1756554691069
+      },
+      "validationProcessArchivalData" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is the result of the LTV validation process acceptable?",
+            "nameId" : "ARCH_LTVV"
+          },
+          "status" : "NOT_OK",
+          "error" : {
+            "value" : "The result of the LTV validation process is not acceptable to continue the process!",
+            "nameId" : "ARCH_LTVV_ANS"
+          },
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "INDETERMINATE",
+          "subIndication" : "SIGNATURE_POLICY_NOT_AVAILABLE",
+          "errors" : [ {
+            "value" : "The signature policy is not available!",
+            "nameId" : "BBB_VCI_ISPA_ANS"
+          } ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        },
+        "bestSignatureTime" : 1756554691069
+      },
+      "validationSignatureQualification" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is the signature/seal an acceptable AdES (ETSI EN 319 102-1) ?",
+            "nameId" : "QUAL_IS_ADES"
+          },
+          "status" : "WARNING",
+          "error" : null,
+          "warning" : {
+            "value" : "The signature/seal is an INDETERMINATE AdES!",
+            "nameId" : "QUAL_IS_ADES_IND"
+          },
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        }, {
+          "name" : {
+            "value" : "Is the certificate path trusted?",
+            "nameId" : "QUAL_TRUSTED_CERT_PATH"
+          },
+          "status" : "NOT_OK",
+          "error" : {
+            "value" : "The certificate path is not trusted!",
+            "nameId" : "QUAL_TRUSTED_CERT_PATH_ANS"
+          },
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "FAILED",
+          "subIndication" : null,
+          "errors" : [ {
+            "value" : "The certificate path is not trusted!",
+            "nameId" : "QUAL_TRUSTED_CERT_PATH_ANS"
+          }, {
+            "value" : "The certificate path is not trusted!",
+            "nameId" : "QUAL_TRUSTED_CERT_PATH_ANS"
+          } ],
+          "warnings" : [ {
+            "value" : "The signature/seal is an INDETERMINATE AdES!",
+            "nameId" : "QUAL_IS_ADES_IND"
+          } ],
+          "infos" : [ ]
+        },
+        "validationCertificateQualification" : [ ],
+        "id" : null,
+        "signatureQualification" : "NA"
+      },
+      "id" : "SigFrs",
+      "counterSignature" : null
+    }, {
+      "validationProcessBasicSignatures" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is the result of the Basic Validation Process conclusive?",
+            "nameId" : "ADEST_ROBVPIIC"
+          },
+          "status" : "NOT_OK",
+          "error" : {
+            "value" : "The result of the Basic validation process is not conclusive!",
+            "nameId" : "ADEST_ROBVPIIC_ANS"
+          },
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : "SigTTN"
+        } ],
+        "conclusion" : {
+          "indication" : "INDETERMINATE",
+          "subIndication" : "SIGNATURE_POLICY_NOT_AVAILABLE",
+          "errors" : [ {
+            "value" : "The signature policy is not available!",
+            "nameId" : "BBB_VCI_ISPA_ANS"
+          } ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        },
+        "bestSignatureTime" : 1756554691069
+      },
+      "validationProcessTimestamps" : [ ],
+      "validationProcessLongTermData" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is the result of the Basic Validation Process acceptable?",
+            "nameId" : "LTV_ABSV"
+          },
+          "status" : "NOT_OK",
+          "error" : {
+            "value" : "The result of the Basic validation process is not acceptable to continue the process!",
+            "nameId" : "LTV_ABSV_ANS"
+          },
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "INDETERMINATE",
+          "subIndication" : "SIGNATURE_POLICY_NOT_AVAILABLE",
+          "errors" : [ {
+            "value" : "The signature policy is not available!",
+            "nameId" : "BBB_VCI_ISPA_ANS"
+          } ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        },
+        "bestSignatureTime" : 1756554691069
+      },
+      "validationProcessArchivalData" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is the result of the LTV validation process acceptable?",
+            "nameId" : "ARCH_LTVV"
+          },
+          "status" : "NOT_OK",
+          "error" : {
+            "value" : "The result of the LTV validation process is not acceptable to continue the process!",
+            "nameId" : "ARCH_LTVV_ANS"
+          },
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "INDETERMINATE",
+          "subIndication" : "SIGNATURE_POLICY_NOT_AVAILABLE",
+          "errors" : [ {
+            "value" : "The signature policy is not available!",
+            "nameId" : "BBB_VCI_ISPA_ANS"
+          } ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        },
+        "bestSignatureTime" : 1756554691069
+      },
+      "validationSignatureQualification" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is the signature/seal an acceptable AdES (ETSI EN 319 102-1) ?",
+            "nameId" : "QUAL_IS_ADES"
+          },
+          "status" : "WARNING",
+          "error" : null,
+          "warning" : {
+            "value" : "The signature/seal is an INDETERMINATE AdES!",
+            "nameId" : "QUAL_IS_ADES_IND"
+          },
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        }, {
+          "name" : {
+            "value" : "Is the certificate path trusted?",
+            "nameId" : "QUAL_TRUSTED_CERT_PATH"
+          },
+          "status" : "NOT_OK",
+          "error" : {
+            "value" : "The certificate path is not trusted!",
+            "nameId" : "QUAL_TRUSTED_CERT_PATH_ANS"
+          },
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "FAILED",
+          "subIndication" : null,
+          "errors" : [ {
+            "value" : "The certificate path is not trusted!",
+            "nameId" : "QUAL_TRUSTED_CERT_PATH_ANS"
+          }, {
+            "value" : "The certificate path is not trusted!",
+            "nameId" : "QUAL_TRUSTED_CERT_PATH_ANS"
+          } ],
+          "warnings" : [ {
+            "value" : "The signature/seal is an INDETERMINATE AdES!",
+            "nameId" : "QUAL_IS_ADES_IND"
+          } ],
+          "infos" : [ ]
+        },
+        "validationCertificateQualification" : [ ],
+        "id" : null,
+        "signatureQualification" : "NA"
+      },
+      "id" : "SigTTN",
+      "counterSignature" : null
+    }, {
+      "validationProcessBasicSignatures" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is the result of the Basic Validation Process conclusive?",
+            "nameId" : "ADEST_ROBVPIIC"
+          },
+          "status" : "NOT_OK",
+          "error" : {
+            "value" : "The result of the Basic validation process is not conclusive!",
+            "nameId" : "ADEST_ROBVPIIC_ANS"
+          },
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : "SigFrs"
+        } ],
+        "conclusion" : {
+          "indication" : "INDETERMINATE",
+          "subIndication" : "SIGNATURE_POLICY_NOT_AVAILABLE",
+          "errors" : [ {
+            "value" : "The signature policy is not available!",
+            "nameId" : "BBB_VCI_ISPA_ANS"
+          } ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        },
+        "bestSignatureTime" : 1756554691069
+      },
+      "validationProcessTimestamps" : [ ],
+      "validationProcessLongTermData" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is the result of the Basic Validation Process acceptable?",
+            "nameId" : "LTV_ABSV"
+          },
+          "status" : "NOT_OK",
+          "error" : {
+            "value" : "The result of the Basic validation process is not acceptable to continue the process!",
+            "nameId" : "LTV_ABSV_ANS"
+          },
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "INDETERMINATE",
+          "subIndication" : "SIGNATURE_POLICY_NOT_AVAILABLE",
+          "errors" : [ {
+            "value" : "The signature policy is not available!",
+            "nameId" : "BBB_VCI_ISPA_ANS"
+          } ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        },
+        "bestSignatureTime" : 1756554691069
+      },
+      "validationProcessArchivalData" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is the result of the LTV validation process acceptable?",
+            "nameId" : "ARCH_LTVV"
+          },
+          "status" : "NOT_OK",
+          "error" : {
+            "value" : "The result of the LTV validation process is not acceptable to continue the process!",
+            "nameId" : "ARCH_LTVV_ANS"
+          },
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "INDETERMINATE",
+          "subIndication" : "SIGNATURE_POLICY_NOT_AVAILABLE",
+          "errors" : [ {
+            "value" : "The signature policy is not available!",
+            "nameId" : "BBB_VCI_ISPA_ANS"
+          } ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        },
+        "bestSignatureTime" : 1756554691069
+      },
+      "validationSignatureQualification" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is the signature/seal an acceptable AdES (ETSI EN 319 102-1) ?",
+            "nameId" : "QUAL_IS_ADES"
+          },
+          "status" : "WARNING",
+          "error" : null,
+          "warning" : {
+            "value" : "The signature/seal is an INDETERMINATE AdES!",
+            "nameId" : "QUAL_IS_ADES_IND"
+          },
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        }, {
+          "name" : {
+            "value" : "Is the certificate path trusted?",
+            "nameId" : "QUAL_TRUSTED_CERT_PATH"
+          },
+          "status" : "NOT_OK",
+          "error" : {
+            "value" : "The certificate path is not trusted!",
+            "nameId" : "QUAL_TRUSTED_CERT_PATH_ANS"
+          },
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "FAILED",
+          "subIndication" : null,
+          "errors" : [ {
+            "value" : "The certificate path is not trusted!",
+            "nameId" : "QUAL_TRUSTED_CERT_PATH_ANS"
+          }, {
+            "value" : "The certificate path is not trusted!",
+            "nameId" : "QUAL_TRUSTED_CERT_PATH_ANS"
+          } ],
+          "warnings" : [ {
+            "value" : "The signature/seal is an INDETERMINATE AdES!",
+            "nameId" : "QUAL_IS_ADES_IND"
+          } ],
+          "infos" : [ ]
+        },
+        "validationCertificateQualification" : [ ],
+        "id" : null,
+        "signatureQualification" : "NA"
+      },
+      "id" : "SigFrs",
+      "counterSignature" : null
+    } ],
+    "certificate" : null,
+    "basicBuildingBlocks" : [ {
+      "fc" : null,
+      "isc" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is there an identified candidate for the signing certificate?",
+            "nameId" : "BBB_ICS_ISCI"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "PASSED",
+          "subIndication" : null,
+          "errors" : [ ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        },
+        "certificateChain" : {
+          "chainItem" : [ {
+            "source" : "OCSP_RESPONSE",
+            "id" : "62765C9897D674603811D27C4C2ACED095B9BDFD5DB9CE69D118BE9A58A7DD1A"
+          }, {
+            "source" : "TRUSTED_STORE",
+            "id" : "20522A618569C4CCEB8BAAD6F7536A1ECDABAF0F72C3A9BE2A228BC833A2EAC7"
+          } ]
+        }
+      },
+      "vci" : null,
+      "cv" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is the signature intact?",
+            "nameId" : "BBB_CV_ISI"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "PASSED",
+          "subIndication" : null,
+          "errors" : [ ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        }
+      },
+      "sav" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Are signature cryptographic constraints met?",
+            "nameId" : "ASCCM"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : "Validation time : 2025-08-30 11:51",
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "PASSED",
+          "subIndication" : null,
+          "errors" : [ ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        }
+      },
+      "xcv" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Can the certificate chain be built till the trust anchor?",
+            "nameId" : "BBB_XCV_CCCBB"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        }, {
+          "name" : {
+            "value" : "Is the certificate validation concluant ?",
+            "nameId" : "BBB_XCV_SUB"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : "62765C9897D674603811D27C4C2ACED095B9BDFD5DB9CE69D118BE9A58A7DD1A"
+        }, {
+          "name" : {
+            "value" : "Is the certificate validation concluant ?",
+            "nameId" : "BBB_XCV_SUB"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : "20522A618569C4CCEB8BAAD6F7536A1ECDABAF0F72C3A9BE2A228BC833A2EAC7"
+        } ],
+        "conclusion" : {
+          "indication" : "PASSED",
+          "subIndication" : null,
+          "errors" : [ ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        },
+        "subXCV" : [ {
+          "constraint" : [ {
+            "name" : {
+              "value" : "Is the certificate's signature intact?",
+              "nameId" : "BBB_XCV_ICSI"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : null,
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "Are signature cryptographic constraints met?",
+              "nameId" : "ASCCM"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : "Validation time : 2025-08-30 11:51",
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "Is the current time in the validity range of the signer's certificate?",
+              "nameId" : "BBB_XCV_ICTIVRSC"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : "Certificate validity : 2024-12-19 09:56 to 2026-12-19 09:56",
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "Is the certificate not revoked?",
+              "nameId" : "BBB_XCV_ISCR"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : null,
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "Is the certificate on hold?",
+              "nameId" : "BBB_XCV_ISCOH"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : null,
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "The certificate has the id-pkix-ocsp-nocheck extension (RFC is skipped)",
+              "nameId" : "BBB_XCV_OCSP_NO_CHECK"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : null,
+            "id" : null
+          } ],
+          "conclusion" : {
+            "indication" : "PASSED",
+            "subIndication" : null,
+            "errors" : [ ],
+            "warnings" : [ ],
+            "infos" : [ ]
+          },
+          "rfc" : null,
+          "id" : "62765C9897D674603811D27C4C2ACED095B9BDFD5DB9CE69D118BE9A58A7DD1A",
+          "trustAnchor" : false
+        }, {
+          "constraint" : [ ],
+          "conclusion" : {
+            "indication" : "PASSED",
+            "subIndication" : null,
+            "errors" : [ ],
+            "warnings" : [ ],
+            "infos" : [ ]
+          },
+          "rfc" : null,
+          "id" : "20522A618569C4CCEB8BAAD6F7536A1ECDABAF0F72C3A9BE2A228BC833A2EAC7",
+          "trustAnchor" : true
+        } ]
+      },
+      "psv" : null,
+      "pcv" : null,
+      "vts" : null,
+      "certificateChain" : {
+        "chainItem" : [ {
+          "source" : "OCSP_RESPONSE",
+          "id" : "62765C9897D674603811D27C4C2ACED095B9BDFD5DB9CE69D118BE9A58A7DD1A"
+        }, {
+          "source" : "TRUSTED_STORE",
+          "id" : "20522A618569C4CCEB8BAAD6F7536A1ECDABAF0F72C3A9BE2A228BC833A2EAC7"
+        } ]
+      },
+      "conclusion" : {
+        "indication" : "PASSED",
+        "subIndication" : null,
+        "errors" : [ ],
+        "warnings" : [ ],
+        "infos" : [ ]
+      },
+      "id" : "57a96d61ff452f5d2c9c7f962ef1f023124f72a293b87d4e3c8850448dab2fc97e5fd0fdba06595e5c16e760e3ab908aae5db27b87c953fdb7558af12aa4d71d",
+      "type" : "REVOCATION"
+    }, {
+      "fc" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is the expected format found?",
+            "nameId" : "BBB_FC_IEFF"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "PASSED",
+          "subIndication" : null,
+          "errors" : [ ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        }
+      },
+      "isc" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is there an identified candidate for the signing certificate?",
+            "nameId" : "BBB_ICS_ISCI"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        }, {
+          "name" : {
+            "value" : "Is the signed attribute: 'signing-certificate' present?",
+            "nameId" : "BBB_ICS_ISASCP"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        }, {
+          "name" : {
+            "value" : "Is the signed attribute: 'cert-digest' of the certificate present?",
+            "nameId" : "BBB_ICS_ISACDP"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        }, {
+          "name" : {
+            "value" : "Is the certificate's digest value valid?",
+            "nameId" : "BBB_ICS_ICDVV"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        }, {
+          "name" : {
+            "value" : "Are the issuer distinguished name and the serial number equal?",
+            "nameId" : "BBB_ICS_AIDNASNE"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "PASSED",
+          "subIndication" : null,
+          "errors" : [ ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        },
+        "certificateChain" : {
+          "chainItem" : [ {
+            "source" : "SIGNATURE",
+            "id" : "4357DB3B121E5FDC038E9BEC60C80F7EE8B2CDAC736A39E3FD32DE58EA2FF0E5"
+          }, {
+            "source" : "TRUSTED_STORE",
+            "id" : "45877EFD70093B5BB366FFC6FCF0D5B7EFFE1C0EC1DE4D54E1067D8B5FEB1F5C"
+          }, {
+            "source" : "TRUSTED_STORE",
+            "id" : "379368F78E9937A8B0BB723E999950861275120D6775324E37A70CF169760A64"
+          }, {
+            "source" : "TRUSTED_STORE",
+            "id" : "4FBA9F8B2BF70D947FF847C15FBA65133884018A9BB2B2E209B833C93F57B67C"
+          } ]
+        }
+      },
+      "vci" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is the signature policy known?",
+            "nameId" : "BBB_VCI_ISPK"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        }, {
+          "name" : {
+            "value" : "Is the signature policy available?",
+            "nameId" : "BBB_VCI_ISPA"
+          },
+          "status" : "NOT_OK",
+          "error" : {
+            "value" : "The signature policy is not available!",
+            "nameId" : "BBB_VCI_ISPA_ANS"
+          },
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "INDETERMINATE",
+          "subIndication" : "SIGNATURE_POLICY_NOT_AVAILABLE",
+          "errors" : [ {
+            "value" : "The signature policy is not available!",
+            "nameId" : "BBB_VCI_ISPA_ANS"
+          } ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        }
+      },
+      "cv" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is the reference data object found?",
+            "nameId" : "BBB_CV_IRDOF"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : "Reference : r-id-ttn",
+          "id" : null
+        }, {
+          "name" : {
+            "value" : "Is the reference data object intact?",
+            "nameId" : "BBB_CV_IRDOI"
+          },
+          "status" : "NOT_OK",
+          "error" : {
+            "value" : "The reference data object is not intact!",
+            "nameId" : "BBB_CV_IRDOI_ANS"
+          },
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : "Reference : r-id-ttn",
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "FAILED",
+          "subIndication" : "HASH_FAILURE",
+          "errors" : [ {
+            "value" : "The reference data object is not intact!",
+            "nameId" : "BBB_CV_IRDOI_ANS"
+          } ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        }
+      },
+      "sav" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is signed qualifying property: 'signing-time' present?",
+            "nameId" : "BBB_SAV_ISQPSTP"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        }, {
+          "name" : {
+            "value" : "Are signature cryptographic constraints met?",
+            "nameId" : "ASCCM"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : "Validation time : 2025-08-30 11:51",
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "PASSED",
+          "subIndication" : null,
+          "errors" : [ ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        }
+      },
+      "xcv" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Can the certificate chain be built till the trust anchor?",
+            "nameId" : "BBB_XCV_CCCBB"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        }, {
+          "name" : {
+            "value" : "Is the certificate validation concluant ?",
+            "nameId" : "BBB_XCV_SUB"
+          },
+          "status" : "NOT_OK",
+          "error" : {
+            "value" : "The certificate validation is not concluant!",
+            "nameId" : "BBB_XCV_SUB_ANS"
+          },
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : "4357DB3B121E5FDC038E9BEC60C80F7EE8B2CDAC736A39E3FD32DE58EA2FF0E5"
+        } ],
+        "conclusion" : {
+          "indication" : "INDETERMINATE",
+          "subIndication" : "OUT_OF_BOUNDS_NO_POE",
+          "errors" : [ {
+            "value" : "The current time is not in the validity range of the signer's certificate.",
+            "nameId" : "BBB_XCV_ICTIVRSC_ANS"
+          } ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        },
+        "subXCV" : [ {
+          "constraint" : [ {
+            "name" : {
+              "value" : "Is the certificate unique ?",
+              "nameId" : "QUAL_UNIQUE_CERT"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : null,
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "Is pseudo used ?",
+              "nameId" : "BBB_XCV_PSEUDO_USE"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : null,
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "Is not self-signed certificate?",
+              "nameId" : "BBB_XCV_ISNSSC"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : null,
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "Is the certificate's signature intact?",
+              "nameId" : "BBB_XCV_ICSI"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : null,
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "Are signature cryptographic constraints met?",
+              "nameId" : "ASCCM"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : "Validation time : 2025-08-30 11:51",
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "Has the signer's certificate given key-usage?",
+              "nameId" : "BBB_XCV_ISCGKU"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : "Key usage : digitalSignature, nonRepudiation",
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "Is authority info access present?",
+              "nameId" : "BBB_XCV_AIA_PRES"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : null,
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "Is revocation info access present?",
+              "nameId" : "BBB_XCV_REVOC_PRES"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : null,
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "Is the current time in the validity range of the signer's certificate?",
+              "nameId" : "BBB_XCV_ICTIVRSC"
+            },
+            "status" : "NOT_OK",
+            "error" : {
+              "value" : "The current time is not in the validity range of the signer's certificate.",
+              "nameId" : "BBB_XCV_ICTIVRSC_ANS"
+            },
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : "Certificate validity : 2019-05-22 09:25 to 2021-05-21 09:25",
+            "id" : null
+          } ],
+          "conclusion" : {
+            "indication" : "INDETERMINATE",
+            "subIndication" : "OUT_OF_BOUNDS_NO_POE",
+            "errors" : [ {
+              "value" : "The current time is not in the validity range of the signer's certificate.",
+              "nameId" : "BBB_XCV_ICTIVRSC_ANS"
+            } ],
+            "warnings" : [ ],
+            "infos" : [ ]
+          },
+          "rfc" : {
+            "constraint" : [ {
+              "name" : {
+                "value" : "Is the revocation data present for the certificate?",
+                "nameId" : "BBB_XCV_IRDPFC"
+              },
+              "status" : "NOT_OK",
+              "error" : {
+                "value" : "No revocation data for the certificate",
+                "nameId" : "BBB_XCV_IRDPFC_ANS"
+              },
+              "warning" : null,
+              "info" : null,
+              "additionalInfo" : null,
+              "id" : null
+            } ],
+            "conclusion" : {
+              "indication" : "INDETERMINATE",
+              "subIndication" : "TRY_LATER",
+              "errors" : [ {
+                "value" : "No revocation data for the certificate",
+                "nameId" : "BBB_XCV_IRDPFC_ANS"
+              } ],
+              "warnings" : [ ],
+              "infos" : [ ]
+            },
+            "id" : null
+          },
+          "id" : "4357DB3B121E5FDC038E9BEC60C80F7EE8B2CDAC736A39E3FD32DE58EA2FF0E5",
+          "trustAnchor" : false
+        }, {
+          "constraint" : [ ],
+          "conclusion" : {
+            "indication" : "PASSED",
+            "subIndication" : null,
+            "errors" : [ ],
+            "warnings" : [ ],
+            "infos" : [ ]
+          },
+          "rfc" : null,
+          "id" : "45877EFD70093B5BB366FFC6FCF0D5B7EFFE1C0EC1DE4D54E1067D8B5FEB1F5C",
+          "trustAnchor" : true
+        } ]
+      },
+      "psv" : null,
+      "pcv" : null,
+      "vts" : null,
+      "certificateChain" : {
+        "chainItem" : [ {
+          "source" : "SIGNATURE",
+          "id" : "4357DB3B121E5FDC038E9BEC60C80F7EE8B2CDAC736A39E3FD32DE58EA2FF0E5"
+        }, {
+          "source" : "TRUSTED_STORE",
+          "id" : "45877EFD70093B5BB366FFC6FCF0D5B7EFFE1C0EC1DE4D54E1067D8B5FEB1F5C"
+        }, {
+          "source" : "TRUSTED_STORE",
+          "id" : "379368F78E9937A8B0BB723E999950861275120D6775324E37A70CF169760A64"
+        }, {
+          "source" : "TRUSTED_STORE",
+          "id" : "4FBA9F8B2BF70D947FF847C15FBA65133884018A9BB2B2E209B833C93F57B67C"
+        } ]
+      },
+      "conclusion" : {
+        "indication" : "FAILED",
+        "subIndication" : "HASH_FAILURE",
+        "errors" : [ {
+          "value" : "The signature policy is not available!",
+          "nameId" : "BBB_VCI_ISPA_ANS"
+        }, {
+          "value" : "The current time is not in the validity range of the signer's certificate.",
+          "nameId" : "BBB_XCV_ICTIVRSC_ANS"
+        }, {
+          "value" : "The reference data object is not intact!",
+          "nameId" : "BBB_CV_IRDOI_ANS"
+        } ],
+        "warnings" : [ ],
+        "infos" : [ ]
+      },
+      "id" : "SigTTN",
+      "type" : "SIGNATURE"
+    }, {
+      "fc" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is the expected format found?",
+            "nameId" : "BBB_FC_IEFF"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "PASSED",
+          "subIndication" : null,
+          "errors" : [ ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        }
+      },
+      "isc" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is there an identified candidate for the signing certificate?",
+            "nameId" : "BBB_ICS_ISCI"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        }, {
+          "name" : {
+            "value" : "Is the signed attribute: 'signing-certificate' present?",
+            "nameId" : "BBB_ICS_ISASCP"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        }, {
+          "name" : {
+            "value" : "Is the signed attribute: 'cert-digest' of the certificate present?",
+            "nameId" : "BBB_ICS_ISACDP"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        }, {
+          "name" : {
+            "value" : "Is the certificate's digest value valid?",
+            "nameId" : "BBB_ICS_ICDVV"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        }, {
+          "name" : {
+            "value" : "Are the issuer distinguished name and the serial number equal?",
+            "nameId" : "BBB_ICS_AIDNASNE"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "PASSED",
+          "subIndication" : null,
+          "errors" : [ ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        },
+        "certificateChain" : {
+          "chainItem" : [ {
+            "source" : "SIGNATURE",
+            "id" : "C89B03BE1F0232DCD164D0F1E126C1DF055E5F7DC2082CB2CFB199CE45AF6497"
+          }, {
+            "source" : "TRUSTED_STORE",
+            "id" : "45877EFD70093B5BB366FFC6FCF0D5B7EFFE1C0EC1DE4D54E1067D8B5FEB1F5C"
+          }, {
+            "source" : "TRUSTED_STORE",
+            "id" : "379368F78E9937A8B0BB723E999950861275120D6775324E37A70CF169760A64"
+          }, {
+            "source" : "TRUSTED_STORE",
+            "id" : "4FBA9F8B2BF70D947FF847C15FBA65133884018A9BB2B2E209B833C93F57B67C"
+          } ]
+        }
+      },
+      "vci" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is the signature policy known?",
+            "nameId" : "BBB_VCI_ISPK"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        }, {
+          "name" : {
+            "value" : "Is the signature policy available?",
+            "nameId" : "BBB_VCI_ISPA"
+          },
+          "status" : "NOT_OK",
+          "error" : {
+            "value" : "The signature policy is not available!",
+            "nameId" : "BBB_VCI_ISPA_ANS"
+          },
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "INDETERMINATE",
+          "subIndication" : "SIGNATURE_POLICY_NOT_AVAILABLE",
+          "errors" : [ {
+            "value" : "The signature policy is not available!",
+            "nameId" : "BBB_VCI_ISPA_ANS"
+          } ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        }
+      },
+      "cv" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is the reference data object found?",
+            "nameId" : "BBB_CV_IRDOF"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : "Reference : r-id-frs",
+          "id" : null
+        }, {
+          "name" : {
+            "value" : "Is the reference data object intact?",
+            "nameId" : "BBB_CV_IRDOI"
+          },
+          "status" : "NOT_OK",
+          "error" : {
+            "value" : "The reference data object is not intact!",
+            "nameId" : "BBB_CV_IRDOI_ANS"
+          },
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : "Reference : r-id-frs",
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "FAILED",
+          "subIndication" : "HASH_FAILURE",
+          "errors" : [ {
+            "value" : "The reference data object is not intact!",
+            "nameId" : "BBB_CV_IRDOI_ANS"
+          } ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        }
+      },
+      "sav" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Is signed qualifying property: 'signing-time' present?",
+            "nameId" : "BBB_SAV_ISQPSTP"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        }, {
+          "name" : {
+            "value" : "Are signature cryptographic constraints met?",
+            "nameId" : "ASCCM"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : "Validation time : 2025-08-30 11:51",
+          "id" : null
+        } ],
+        "conclusion" : {
+          "indication" : "PASSED",
+          "subIndication" : null,
+          "errors" : [ ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        }
+      },
+      "xcv" : {
+        "constraint" : [ {
+          "name" : {
+            "value" : "Can the certificate chain be built till the trust anchor?",
+            "nameId" : "BBB_XCV_CCCBB"
+          },
+          "status" : "OK",
+          "error" : null,
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : null
+        }, {
+          "name" : {
+            "value" : "Is the certificate validation concluant ?",
+            "nameId" : "BBB_XCV_SUB"
+          },
+          "status" : "NOT_OK",
+          "error" : {
+            "value" : "The certificate validation is not concluant!",
+            "nameId" : "BBB_XCV_SUB_ANS"
+          },
+          "warning" : null,
+          "info" : null,
+          "additionalInfo" : null,
+          "id" : "C89B03BE1F0232DCD164D0F1E126C1DF055E5F7DC2082CB2CFB199CE45AF6497"
+        } ],
+        "conclusion" : {
+          "indication" : "INDETERMINATE",
+          "subIndication" : "OUT_OF_BOUNDS_NO_POE",
+          "errors" : [ {
+            "value" : "The current time is not in the validity range of the signer's certificate.",
+            "nameId" : "BBB_XCV_ICTIVRSC_ANS"
+          } ],
+          "warnings" : [ ],
+          "infos" : [ ]
+        },
+        "subXCV" : [ {
+          "constraint" : [ {
+            "name" : {
+              "value" : "Is the certificate unique ?",
+              "nameId" : "QUAL_UNIQUE_CERT"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : null,
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "Is pseudo used ?",
+              "nameId" : "BBB_XCV_PSEUDO_USE"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : null,
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "Is not self-signed certificate?",
+              "nameId" : "BBB_XCV_ISNSSC"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : null,
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "Is the certificate's signature intact?",
+              "nameId" : "BBB_XCV_ICSI"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : null,
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "Are signature cryptographic constraints met?",
+              "nameId" : "ASCCM"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : "Validation time : 2025-08-30 11:51",
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "Has the signer's certificate given key-usage?",
+              "nameId" : "BBB_XCV_ISCGKU"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : "Key usage : digitalSignature, nonRepudiation",
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "Is authority info access present?",
+              "nameId" : "BBB_XCV_AIA_PRES"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : null,
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "Is revocation info access present?",
+              "nameId" : "BBB_XCV_REVOC_PRES"
+            },
+            "status" : "OK",
+            "error" : null,
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : null,
+            "id" : null
+          }, {
+            "name" : {
+              "value" : "Is the current time in the validity range of the signer's certificate?",
+              "nameId" : "BBB_XCV_ICTIVRSC"
+            },
+            "status" : "NOT_OK",
+            "error" : {
+              "value" : "The current time is not in the validity range of the signer's certificate.",
+              "nameId" : "BBB_XCV_ICTIVRSC_ANS"
+            },
+            "warning" : null,
+            "info" : null,
+            "additionalInfo" : "Certificate validity : 2019-07-05 06:37 to 2021-07-04 06:37",
+            "id" : null
+          } ],
+          "conclusion" : {
+            "indication" : "INDETERMINATE",
+            "subIndication" : "OUT_OF_BOUNDS_NO_POE",
+            "errors" : [ {
+              "value" : "The current time is not in the validity range of the signer's certificate.",
+              "nameId" : "BBB_XCV_ICTIVRSC_ANS"
+            } ],
+            "warnings" : [ ],
+            "infos" : [ ]
+          },
+          "rfc" : {
+            "constraint" : [ {
+              "name" : {
+                "value" : "Is the revocation data present for the certificate?",
+                "nameId" : "BBB_XCV_IRDPFC"
+              },
+              "status" : "NOT_OK",
+              "error" : {
+                "value" : "No revocation data for the certificate",
+                "nameId" : "BBB_XCV_IRDPFC_ANS"
+              },
+              "warning" : null,
+              "info" : null,
+              "additionalInfo" : null,
+              "id" : null
+            } ],
+            "conclusion" : {
+              "indication" : "INDETERMINATE",
+              "subIndication" : "TRY_LATER",
+              "errors" : [ {
+                "value" : "No revocation data for the certificate",
+                "nameId" : "BBB_XCV_IRDPFC_ANS"
+              } ],
+              "warnings" : [ ],
+              "infos" : [ ]
+            },
+            "id" : null
+          },
+          "id" : "C89B03BE1F0232DCD164D0F1E126C1DF055E5F7DC2082CB2CFB199CE45AF6497",
+          "trustAnchor" : false
+        }, {
+          "constraint" : [ ],
+          "conclusion" : {
+            "indication" : "PASSED",
+            "subIndication" : null,
+            "errors" : [ ],
+            "warnings" : [ ],
+            "infos" : [ ]
+          },
+          "rfc" : null,
+          "id" : "45877EFD70093B5BB366FFC6FCF0D5B7EFFE1C0EC1DE4D54E1067D8B5FEB1F5C",
+          "trustAnchor" : true
+        } ]
+      },
+      "psv" : null,
+      "pcv" : null,
+      "vts" : null,
+      "certificateChain" : {
+        "chainItem" : [ {
+          "source" : "SIGNATURE",
+          "id" : "C89B03BE1F0232DCD164D0F1E126C1DF055E5F7DC2082CB2CFB199CE45AF6497"
+        }, {
+          "source" : "TRUSTED_STORE",
+          "id" : "45877EFD70093B5BB366FFC6FCF0D5B7EFFE1C0EC1DE4D54E1067D8B5FEB1F5C"
+        }, {
+          "source" : "TRUSTED_STORE",
+          "id" : "379368F78E9937A8B0BB723E999950861275120D6775324E37A70CF169760A64"
+        }, {
+          "source" : "TRUSTED_STORE",
+          "id" : "4FBA9F8B2BF70D947FF847C15FBA65133884018A9BB2B2E209B833C93F57B67C"
+        } ]
+      },
+      "conclusion" : {
+        "indication" : "FAILED",
+        "subIndication" : "HASH_FAILURE",
+        "errors" : [ {
+          "value" : "The signature policy is not available!",
+          "nameId" : "BBB_VCI_ISPA_ANS"
+        }, {
+          "value" : "The current time is not in the validity range of the signer's certificate.",
+          "nameId" : "BBB_XCV_ICTIVRSC_ANS"
+        }, {
+          "value" : "The reference data object is not intact!",
+          "nameId" : "BBB_CV_IRDOI_ANS"
+        } ],
+        "warnings" : [ ],
+        "infos" : [ ]
+      },
+      "id" : "SigFrs",
+      "type" : "SIGNATURE"
+    } ],
+    "tlanalysis" : [ ]
+  },
+  "ttnInvoiceId" : "<?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S=\"http://schemas.xmlsoap.org/soap/envelope/\"><S:Body><S:Fault xmlns:ns4=\"http://www.w3.org/2003/05/soap-envelope\"><faultcode>S:Server</faultcode><faultstring>tn.com.tradenet.elfatoura.services.exception.EfactServiceException</faultstring><detail><ns2:FaultBean xmlns:ns2=\"http://services.elfatoura.tradenet.com.tn/\"><faultCode>SERV12</faultCode><faultMessage>Votre matricule est invalide : Merci de vérifier votre matricule dans la facture xml, la balise 'MessageSenderIdentifier' </faultMessage></ns2:FaultBean></detail></S:Fault></S:Body></S:Envelope>",
+  "ttnStatus" : "Successfully saved to TTN with ID: <?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S=\"http://schemas.xmlsoap.org/soap/envelope/\"><S:Body><S:Fault xmlns:ns4=\"http://www.w3.org/2003/05/soap-envelope\"><faultcode>S:Server</faultcode><faultstring>tn.com.tradenet.elfatoura.services.exception.EfactServiceException</faultstring><detail><ns2:FaultBean xmlns:ns2=\"http://services.elfatoura.tradenet.com.tn/\"><faultCode>SERV12</faultCode><faultMessage>Votre matricule est invalide : Merci de vérifier votre matricule dans la facture xml, la balise 'MessageSenderIdentifier' </faultMessage></ns2:FaultBean></detail></S:Fault></S:Body></S:Envelope>"
+}

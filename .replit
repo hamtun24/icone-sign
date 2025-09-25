@@ -37,10 +37,6 @@ externalPort = 80
 localPort = 8080
 externalPort = 8080
 
-[[ports]]
-localPort = 45223
-externalPort = 3000
-
 [deployment]
 deploymentTarget = "autoscale"
 run = ["bash", "-c", "cd nextjs && npm start"]

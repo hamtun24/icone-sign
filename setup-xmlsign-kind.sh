@@ -134,12 +134,18 @@ setup_kind_cluster() {
     fi
     
     print_status "Creating new Kind cluster..."
-    kind create cluster --config=kind-config.yaml
+    kind create cluster --name xmlsign-cluster --config=kind-config.yaml
     
     # Wait for cluster to be ready
     print_info "Waiting for cluster to be ready..."
     kubectl wait --for=condition=Ready nodes --all --timeout=300s
     print_status "Kind cluster is ready"
+    
+    # Install local storage provisioner for PVC support
+    print_info "Installing local storage provisioner..."
+    kubectl apply -f https://raw.githubusercontent.com/rancher/local-path-provisioner/v0.0.26/deploy/local-path-storage.yaml
+    kubectl patch storageclass local-path -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+    print_status "Storage provisioner installed"
 }
 
 # Load Docker images into Kind
@@ -178,10 +184,16 @@ create_secrets() {
         exit 1
     fi
     
-    # Create the secret
+    # Generate secure random values for application secrets
+    JWT_SECRET=$(openssl rand -base64 64 | tr -d '\n')
+    ANCE_SEAL_PIN=$(openssl rand -base64 32 | tr -d '\n')
+    
+    # Create the secret with all required values
     kubectl create secret generic app-secrets \
         --from-literal=POSTGRES_PASSWORD="$POSTGRES_PASSWORD" \
         --from-literal=TUNNEL_TOKEN="$TUNNEL_TOKEN" \
+        --from-literal=JWT_SECRET="$JWT_SECRET" \
+        --from-literal=ANCE_SEAL_PIN="$ANCE_SEAL_PIN" \
         -n xmlsign --dry-run=client -o yaml | kubectl apply -f -
     
     print_status "Secrets created"

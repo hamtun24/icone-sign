@@ -18,9 +18,6 @@ data:
   # Internal API URL for server-side proxy (backend is internal only)
   INTERNAL_API_URL: "http://springboot-service:8080"
 ---
-# secret.yaml - SECRETS CREATED BY SETUP SCRIPT
-# Note: This secret will be created by the setup script with proper values
----
 # postgres-pvc.yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -70,12 +67,19 @@ spec:
         volumeMounts:
         - name: postgres-storage
           mountPath: /var/lib/postgresql/data
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "200m"
       volumes:
       - name: postgres-storage
         persistentVolumeClaim:
           claimName: postgres-pvc
 ---
-# postgres-service.yaml (ClusterIP - internal only)
+# postgres-service.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -108,7 +112,7 @@ spec:
     spec:
       containers:
       - name: springboot-app
-        image: iconesigndocker-springboot-app:v1.0.1
+        image: iconesigndocker-springboot-app:v1.2.5
         imagePullPolicy: Never
         env:
         - name: SPRING_DATASOURCE_URL
@@ -149,20 +153,20 @@ spec:
           httpGet:
             path: /api/v1/actuator/health
             port: 8080
-          initialDelaySeconds: 30
-          periodSeconds: 10
+          initialDelaySeconds: 90
+          periodSeconds: 15
         livenessProbe:
           httpGet:
             path: /api/v1/actuator/health
             port: 8080
-          initialDelaySeconds: 60
+          initialDelaySeconds: 120
           periodSeconds: 30
       initContainers:
       - name: wait-for-postgres
         image: busybox:1.28
         command: ['sh', '-c', 'until nslookup postgres-service; do echo waiting for postgres; sleep 2; done;']
 ---
-# springboot-service.yaml (ClusterIP - internal only)
+# springboot-service.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -195,7 +199,7 @@ spec:
     spec:
       containers:
       - name: nextjs-app
-        image: iconesigndocker-nextjs-app
+        image: iconesigndocker-nextjs-app:v1.1
         imagePullPolicy: Never
         env:
         - name: NEXT_PUBLIC_API_URL
@@ -203,7 +207,6 @@ spec:
             configMapKeyRef:
               name: app-config
               key: NEXT_PUBLIC_API_URL
-        # Add internal API URL for server-side proxy
         - name: INTERNAL_API_URL
           valueFrom:
             configMapKeyRef:
@@ -217,7 +220,7 @@ spec:
             cpu: "100m"
           limits:
             memory: "512Mi"
-            cpu: "250m"
+            cpu: "200m"
         readinessProbe:
           httpGet:
             path: /
@@ -235,7 +238,7 @@ spec:
         image: busybox:1.28
         command: ['sh', '-c', 'until nslookup springboot-service; do echo waiting for springboot; sleep 2; done;']
 ---
-# nextjs-service.yaml (ClusterIP - will be accessed via Cloudflare tunnel only)
+# nextjs-service.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -249,54 +252,3 @@ spec:
       port: 3000
       targetPort: 3000
   type: ClusterIP
----
-# cloudflared-deployment.yaml - FRONTEND ONLY EXPOSURE
-# Using token-based tunnel configuration (no config file needed)
-# Configure hostname routing in Cloudflare dashboard for your tunnel
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: cloudflared
-  namespace: xmlsign
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: cloudflared
-  template:
-    metadata:
-      labels:
-        app: cloudflared
-    spec:
-      containers:
-      - name: cloudflared
-        image: cloudflare/cloudflared:latest
-        imagePullPolicy: IfNotPresent
-        env:
-        - name: TUNNEL_TOKEN
-          valueFrom:
-            secretKeyRef:
-              name: app-secrets
-              key: TUNNEL_TOKEN
-        command:
-        - "/bin/sh"
-        - "-c"
-        args:
-        - "cloudflared tunnel --no-autoupdate --metrics 0.0.0.0:2000 run --token $TUNNEL_TOKEN"
-        resources:
-          requests:
-            memory: "64Mi"
-            cpu: "50m"
-          limits:
-            memory: "128Mi"
-            cpu: "100m"
-        readinessProbe:
-          httpGet:
-            path: /ready
-            port: 2000
-          initialDelaySeconds: 10
-          periodSeconds: 10
-      initContainers:
-      - name: wait-for-nextjs
-        image: busybox:1.28
-        command: ['sh', '-c', 'until nslookup nextjs-service; do echo waiting for nextjs; sleep 2; done;']

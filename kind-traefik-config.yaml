@@ -1,0 +1,60 @@
+# traefik-config-fixed.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: traefik-config
+  namespace: xmlsign
+data:
+  traefik.yml: |
+    global:
+      checkNewVersion: false
+      sendAnonymousUsage: false
+    
+    api:
+      dashboard: true
+      debug: true
+      insecure: true
+    
+    entryPoints:
+      web:
+        address: ":80"
+        http:
+          redirections:
+            entrypoint:
+              to: websecure
+              scheme: https
+              permanent: true
+      websecure:
+        address: ":443"
+    
+    providers:
+      kubernetesIngress:
+        namespaces:
+          - xmlsign
+      kubernetesCRD:
+        namespaces:
+          - xmlsign
+    
+    certificatesResolvers:
+      cloudflare:
+        acme:
+          email: your-email@example.com
+          storage: /data/acme.json
+          dnsChallenge:
+            provider: cloudflare
+            delayBeforeCheck: 30s
+            resolvers:
+              - "1.1.1.1:53"
+              - "8.8.8.8:53"
+    
+    log:
+      level: DEBUG
+    
+    accessLog: {}
+    
+    ping: {}
+    
+    metrics:
+      prometheus:
+        addEntryPointsLabels: true
+        addServicesLabels: true

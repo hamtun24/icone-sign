@@ -2,13 +2,11 @@
 const nextConfig = {
   output: 'standalone',
   images: {
-    domains: ['localhost'],
+    domains: ['localhost'], // you might want to replace/remove this for prod
   },
   env: {
-    // For client-side, use relative path so it works from any domain
     NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || '/api',
   },
-  // Allow all hosts for Replit proxy environment
   async headers() {
     return [
       {
@@ -23,16 +21,18 @@ const nextConfig = {
     ]
   },
   async rewrites() {
-    // Use localhost for Replit environment
-    const internalApiUrl = process.env.INTERNAL_API_URL || 'http://localhost:8080';
-    
+    const internalApiUrl = process.env.INTERNAL_API_URL;
+    if (!internalApiUrl) {
+      throw new Error("INTERNAL_API_URL is not defined!");
+    }
+
     return [
       {
         source: '/api/:path*',
-        destination: `${internalApiUrl}/api/v1/:path*`, // Add /api/v1 context path to Spring Boot calls
+        destination: `${internalApiUrl}/api/v1/:path*`,
       },
-    ]
+    ];
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

@@ -1,0 +1,339 @@
+# traefik-rbac.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: traefik
+  namespace: xmlsign
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: traefik
+rules:
+  - apiGroups: [""]
+    resources: ["services", "endpoints", "secrets"]
+    verbs: ["get", "list", "watch"]
+  - apiGroups: ["extensions", "networking.k8s.io"]
+    resources: ["ingresses", "ingressclasses"]
+    verbs: ["get", "list", "watch"]
+  - apiGroups: ["extensions", "networking.k8s.io"]
+    resources: ["ingresses/status"]
+    verbs: ["update"]
+  - apiGroups: ["traefik.containo.us"]
+    resources: ["*"]
+    verbs: ["get", "list", "watch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: traefik
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: traefik
+subjects:
+  - kind: ServiceAccount
+    name: traefik
+    namespace: xmlsign
+---
+# traefik-configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: traefik-config
+  namespace: xmlsign
+data:
+  traefik.yml: |
+    global:
+      checkNewVersion: false
+      sendAnonymousUsage: false
+    
+    api:
+      dashboard: true
+      debug: true
+      insecure: false
+    
+    entryPoints:
+      web:
+        address: ":80"
+        http:
+          redirections:
+            entrypoint:
+              to: websecure
+              scheme: https
+              permanent: true
+      websecure:
+        address: ":443"
+    
+    providers:
+      kubernetes:
+        namespaces:
+          - xmlsign
+    
+    certificatesResolvers:
+      cloudflare:
+        acme:
+          email: hammamihitman09@gmail.com  # Replace with your email
+          storage: /data/acme.json
+          dnsChallenge:
+            provider: cloudflare
+            delayBeforeCheck: 30s
+            resolvers:
+              - "1.1.1.1:53"
+              - "8.8.8.8:53"
+    
+    log:
+      level: INFO
+    
+    accessLog: {}
+    
+    metrics:
+      prometheus:
+        addEntryPointsLabels: true
+        addServicesLabels: true
+---
+# traefik-pvc.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: traefik-pvc
+  namespace: xmlsign
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: local-path
+---
+# traefik-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: traefik
+  namespace: xmlsign
+  labels:
+    app: traefik
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: traefik
+  template:
+    metadata:
+      labels:
+        app: traefik
+    spec:
+      serviceAccountName: traefik
+      containers:
+        - name: traefik
+          image: traefik:v3.0
+          ports:
+            - name: web
+              containerPort: 80
+            - name: websecure
+              containerPort: 443
+            - name: admin
+              containerPort: 8080
+          env:
+            - name: CF_DNS_API_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: cloudflare-secrets
+                  key: CF_DNS_API_TOKEN
+            # Alternative: Use Global API Key instead of API Token
+            # - name: CF_API_EMAIL
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: cloudflare-secrets
+            #       key: CF_API_EMAIL
+            # - name: CF_API_KEY
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: cloudflare-secrets
+            #       key: CF_API_KEY
+          volumeMounts:
+            - name: config
+              mountPath: /etc/traefik
+            - name: data
+              mountPath: /data
+          args:
+            - --configFile=/etc/traefik/traefik.yml
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "200m"
+          readinessProbe:
+            httpGet:
+              path: /ping
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /ping
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 30
+      volumes:
+        - name: config
+          configMap:
+            name: traefik-config
+        - name: data
+          persistentVolumeClaim:
+            claimName: traefik-pvc
+---
+# traefik-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: traefik
+  namespace: xmlsign
+  labels:
+    app: traefik
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      name: web
+      targetPort: 80
+    - port: 443
+      name: websecure
+      targetPort: 443
+    - port: 8080
+      name: admin
+      targetPort: 8080
+  selector:
+    app: traefik
+---
+# traefik-dashboard-ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: traefik-dashboard
+  namespace: xmlsign
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/router.tls: "true"
+    traefik.ingress.kubernetes.io/router.tls.certresolver: cloudflare
+    traefik.ingress.kubernetes.io/router.middlewares: xmlsign-auth@kubernetescrd
+spec:
+  tls:
+    - hosts:
+        - traefik.iconesign.tn  # Replace with your domain
+      secretName: traefik-dashboard-tls
+  rules:
+    - host: traefik.iconesign.tn  # Replace with your domain
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: traefik
+                port:
+                  number: 8080
+---
+# Basic Auth Middleware for Traefik Dashboard
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: auth
+  namespace: xmlsign
+spec:
+  basicAuth:
+    secret: traefik-dashboard-auth
+---
+# xmlsign-app-ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: xmlsign-app
+  namespace: xmlsign
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/router.tls: "true"
+    traefik.ingress.kubernetes.io/router.tls.certresolver: cloudflare
+    # Enable compression
+    traefik.ingress.kubernetes.io/router.middlewares: xmlsign-compress@kubernetescrd
+spec:
+  tls:
+    - hosts:
+        - iconesign.tn          # Replace with your domain
+        - www.iconesign.tn      # Replace with your domain
+      secretName: xmlsign-app-tls
+  rules:
+    - host: iconesign.tn        # Replace with your domain
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: springboot-service
+                port:
+                  number: 8080
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: nextjs-service
+                port:
+                  number: 3000
+    - host: www.iconesign.tn    # Replace with your domain
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: springboot-service
+                port:
+                  number: 8080
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: nextjs-service
+                port:
+                  number: 3000
+---
+# Compression Middleware
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: compress
+  namespace: xmlsign
+spec:
+  compress: {}
+---
+# Rate Limiting Middleware (Optional)
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: rate-limit
+  namespace: xmlsign
+spec:
+  rateLimit:
+    burst: 100
+    average: 50
+---
+# Headers Middleware for Security
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: security-headers
+  namespace: xmlsign
+spec:
+  headers:
+    customRequestHeaders:
+      X-Forwarded-Proto: "https"
+    customResponseHeaders:
+      X-Frame-Options: "SAMEORIGIN"
+      X-Content-Type-Options: "nosniff"
+      X-XSS-Protection: "1; mode=block"
+      Referrer-Policy: "strict-origin-when-cross-origin"
+      Strict-Transport-Security: "max-age=31536000; includeSubDomains"
